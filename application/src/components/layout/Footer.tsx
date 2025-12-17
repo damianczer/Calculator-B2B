@@ -6,25 +6,24 @@ const Footer = memo(() => {
 
     return (
         <footer className="mt-auto border-t border-slate-200 bg-white">
-            <div className="container py-8">
-                <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-                    <div className="flex flex-col items-center gap-2 md:items-start">
-                        <p className="text-sm text-slate-600">
-                            Copyright © {currentYear} {APP_NAME}. All rights reserved.
-                        </p>
-                    </div>
-
-                    <nav className="flex gap-6" aria-label="Social links">
+            <div className="w-full py-4 flex justify-center">
+                <div className="flex items-center gap-6">
+                    <p className="text-sm text-slate-600">
+                        Copyright © {currentYear} {APP_NAME}. All rights reserved.
+                    </p>
+                    <span className="text-slate-300">|</span>
+                    <div className="flex items-center gap-2">
+                        <span className="text-sm text-slate-600">Author:</span>
                         <a
-                            href={SOCIAL_LINKS.github.url}
+                            href={SOCIAL_LINKS.author.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-sm text-slate-600 transition-colors hover:text-slate-900"
-                            aria-label={SOCIAL_LINKS.github.label}
+                            className="text-sm text-slate-900 font-medium transition-colors hover:text-green-600"
+                            aria-label={SOCIAL_LINKS.author.label}
                         >
-                            GitHub
+                            {SOCIAL_LINKS.author.label}
                         </a>
-                    </nav>
+                    </div>
                 </div>
             </div>
         </footer>
