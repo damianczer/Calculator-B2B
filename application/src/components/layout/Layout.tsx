@@ -5,10 +5,10 @@ import Footer from './Footer';
 
 const Layout = memo<LayoutProps>(({ children, headerTitle }) => {
     return (
-        <div className="flex min-h-screen flex-col">
+        <div className="flex h-screen flex-col overflow-hidden">
             <Header title={headerTitle} />
 
-            <main className="flex-1">
+            <main className="flex-1 overflow-hidden">
                 {children}
             </main>
 
