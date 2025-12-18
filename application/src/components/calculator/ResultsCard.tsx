@@ -3,7 +3,10 @@ import Card from '../common/Card';
 import Button from '../common/Button';
 import type { ResultsCardProps } from '../../types/calculator';
 
-const formatCurrency = (amount: number): string => {
+const formatCurrency = (amount: number | undefined): string => {
+    if (amount === undefined || amount === null || isNaN(amount)) {
+        return '0.00 zł';
+    }
     return `${amount.toFixed(2)} zł`;
 };
 

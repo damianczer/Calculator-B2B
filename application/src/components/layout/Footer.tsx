@@ -11,7 +11,7 @@ const Footer = memo(() => {
                     <p className="text-sm text-slate-600">
                         Copyright © {currentYear} {APP_NAME}. All rights reserved.
                     </p>
-                    <span className="text-slate-300">|</span>
+                    <span className="text-slate-300 text-sm">|</span>
                     <div className="flex items-center gap-2">
                         <span className="text-sm text-slate-600">Author:</span>
                         <a
