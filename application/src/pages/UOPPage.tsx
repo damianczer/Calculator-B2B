@@ -1,12 +1,15 @@
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import ComingSoonPage from '../components/common/ComingSoonPage';
 import { ClockIcon } from '../components/common/icons';
 
 const UOPPage = memo(() => {
+    const { t } = useTranslation();
+
     return (
         <ComingSoonPage
-            title="Kalkulator UOP"
-            description="Narzędzie do obliczania wynagrodzenia dla umowy o pracę"
+            title={t('pages.uop.title')}
+            description={t('pages.uop.description')}
             icon={<ClockIcon className="w-10 h-10 text-slate-400" />}
         />
     );

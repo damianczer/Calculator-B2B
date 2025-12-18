@@ -9,7 +9,10 @@
     content="Professional B2B Calculator - Enterprise-grade calculation tools for business professionals" />
   <title>Calculator B2B</title>
   <script>
-    if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+    try {
+      const m = document.cookie.match(/(^| )dc_calculator_b2b_settings=([^;]+)/);
+      if (m && JSON.parse(m[2]).t === 'dark') document.documentElement.classList.add('dark');
+    } catch { }
   </script>
 </head>
 

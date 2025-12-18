@@ -1,7 +1,10 @@
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { FC } from 'react';
 
 const LoadingSpinner: FC = memo(() => {
+    const { t } = useTranslation();
+
     return (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-900">
             <div className="flex flex-col items-center gap-4">
@@ -10,7 +13,7 @@ const LoadingSpinner: FC = memo(() => {
                     <div className="absolute inset-0 border-4 border-transparent border-t-slate-100 rounded-full animate-spin"></div>
                 </div>
                 <p className="text-sm font-medium text-slate-300 animate-pulse">
-                    Przełączanie motywu...
+                    {t('theme.switching')}
                 </p>
             </div>
         </div>

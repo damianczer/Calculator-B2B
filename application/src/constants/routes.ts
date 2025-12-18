@@ -2,6 +2,7 @@ export const ROUTES = {
     HOME: '/',
     UOP: '/uop',
     COMPANY: '/company',
+    CURRENCIES: '/currencies',
     GUIDE: '/guide',
 } as const;
 

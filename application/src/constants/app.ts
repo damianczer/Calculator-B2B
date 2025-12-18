@@ -1,11 +1,13 @@
 import { ROUTES } from './routes';
+import { APP_CONFIG } from './config';
 
-export const APP_NAME = 'Calculator B2B' as const;
+export const APP_NAME = APP_CONFIG.NAME;
 
 export const NAVIGATION_LINKS = [
-    { path: ROUTES.HOME, label: 'B2B' },
-    { path: ROUTES.UOP, label: 'UOP' },
-    { path: ROUTES.COMPANY, label: 'Spółka' },
+    { path: ROUTES.HOME, labelKey: 'header.b2b' },
+    { path: ROUTES.UOP, labelKey: 'header.uop' },
+    { path: ROUTES.COMPANY, labelKey: 'header.company' },
+    { path: ROUTES.CURRENCIES, labelKey: 'header.currencies' },
 ] as const;
 
 export const SOCIAL_LINKS = {

@@ -1,36 +1,33 @@
 import type { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 import Card from '../common/Card';
 import Button from '../common/Button';
+import { formatCurrency } from '../../utils/format';
 import type { ResultsCardProps } from '../../types/calculator';
-
-const formatCurrency = (amount: number | undefined): string => {
-    if (amount === undefined || amount === null || isNaN(amount)) {
-        return '0.00 zł';
-    }
-    return `${amount.toFixed(2)} zł`;
-};
 
 const ResultsCard: FC<ResultsCardProps> = ({
     netIncome = 0,
     breakdown = { pit: 0, vat: 0, zus: 0, health: 0 }
 }) => {
+    const { t } = useTranslation();
+
     const breakdownItems = [
-        { label: 'PIT', amount: breakdown.pit },
-        { label: 'VAT', amount: breakdown.vat },
-        { label: 'ZUS', amount: breakdown.zus },
-        { label: 'Zdrowotna', amount: breakdown.health },
+        { label: t('calculator.results.pit'), amount: breakdown.pit },
+        { label: t('calculator.results.vat'), amount: breakdown.vat },
+        { label: t('calculator.results.zus'), amount: breakdown.zus },
+        { label: t('calculator.results.health'), amount: breakdown.health },
     ];
 
     return (
         <Card variant="success">
             <div className="p-4 text-center border-b border-green-500">
                 <div className="inline-block px-3 py-1 bg-green-500 rounded mb-2">
-                    <span className="text-white text-xs font-semibold">Przychód netto</span>
+                    <span className="text-white text-xs font-semibold">{t('calculator.results.netIncome')}</span>
                 </div>
                 <div className="text-4xl font-bold text-white mb-1">
                     {formatCurrency(netIncome).split(' ')[0]} <span className="text-xl">zł</span>
                 </div>
-                <p className="text-green-50 text-xs">Po podatkach i składkach</p>
+                <p className="text-green-50 text-xs">{t('calculator.results.afterTaxes')}</p>
             </div>
 
             <div className="p-4 space-y-1.5 flex-1">
@@ -47,19 +44,16 @@ const ResultsCard: FC<ResultsCardProps> = ({
 
             <div className="p-4 pt-0 space-y-2">
                 <Button variant="success" fullWidth>
-                    Porównaj z UOP
+                    {t('calculator.results.compareUOP')}
                 </Button>
                 <div className="grid grid-cols-2 gap-2">
                     <Button variant="secondary" size="sm">
-                        Udostępnij
+                        {t('calculator.results.details')}
                     </Button>
                     <Button variant="secondary" size="sm">
-                        Reset
+                        {t('calculator.results.save')}
                     </Button>
                 </div>
-                <Button variant="ghost" fullWidth size="sm">
-                    Szczegółowe
-                </Button>
             </div>
         </Card>
     );

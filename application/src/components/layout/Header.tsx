@@ -1,22 +1,27 @@
 import { memo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { NAVIGATION_LINKS } from '../../constants/app';
 import { ROUTES } from '../../constants/routes';
+import { HEADER_CLASSES, HEADER_BUTTON_BASE } from '../../constants/styles';
 import { useTheme } from '../../hooks/useTheme';
+import { useLanguage } from '../../hooks/useLanguage';
 import { SunIcon, MoonIcon } from '../common/icons';
 import type { HeaderProps } from '../../types/components';
 
 const Header = memo<HeaderProps>(() => {
     const location = useLocation();
     const { theme, toggleTheme } = useTheme();
+    const { language, toggleLanguage } = useLanguage();
+    const { t } = useTranslation();
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-700 bg-white/95 dark:bg-slate-900/95 backdrop-blur
-         supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-slate-900/60 transition-colors">
+        <header className={HEADER_CLASSES}>
             <div className="flex h-16 items-center justify-between mx-auto max-w-[1600px] px-4">
                 <div className="flex items-center gap-4">
                     <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100 tracking-tight font-sans">
-                        <span className="bg-gradient-to-r from-slate-900 to-slate-600 dark:from-slate-100 dark:to-slate-400 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-slate-900 to-slate-600 dark:from-slate-100
+                         dark:to-slate-400 bg-clip-text text-transparent">
                             Calculator
                         </span>
                         {' '}
@@ -25,9 +30,10 @@ const Header = memo<HeaderProps>(() => {
                     <span className="text-slate-300 dark:text-slate-600 text-lg -mb-0.5">|</span>
                     <Link
                         to={ROUTES.GUIDE}
-                        className="text-lg font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors -mb-0.5"
+                        className="text-lg font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900
+                         dark:hover:text-slate-100 transition-colors -mb-0.5"
                     >
-                        Poradnik
+                        {t('header.guide')}
                     </Link>
                 </div>
 
@@ -44,15 +50,23 @@ const Header = memo<HeaderProps>(() => {
                                             : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
                                         }`}
                                 >
-                                    {link.label}
+                                    {t(link.labelKey)}
                                 </Link>
                             ))}
                         </div>
                     </nav>
 
                     <button
+                        onClick={toggleLanguage}
+                        className={`${HEADER_BUTTON_BASE} w-10 h-10 flex items-center justify-center font-medium text-sm`}
+                        aria-label="Toggle language"
+                    >
+                        {language === 'pl' ? 'EN' : 'PL'}
+                    </button>
+
+                    <button
                         onClick={toggleTheme}
-                        className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-slate-100 transition-all"
+                        className={`${HEADER_BUTTON_BASE} w-10 h-10 flex items-center justify-center`}
                         aria-label="Toggle theme"
                     >
                         {theme === 'light' ? (
