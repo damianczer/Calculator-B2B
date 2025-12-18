@@ -1,0 +1,93 @@
+{
+    "common": {
+        "appName": "Calculator B2B",
+        "loading": "Loading...",
+        "comingSoon": "Coming Soon"
+    },
+    "header": {
+        "guide": "Guide",
+        "b2b": "B2B",
+        "uop": "UOP",
+        "company": "Company",
+        "currencies": "Currencies"
+    },
+    "footer": {
+        "copyright": "Copyright © {{year}} {{appName}}. All rights reserved.",
+        "author": "Author:"
+    },
+    "calculator": {
+        "revenue": {
+            "title": "Revenue",
+            "subtitle": "Monthly income",
+            "addRevenue": "Add Revenue",
+            "emptyState": "No revenue sources added"
+        },
+        "settings": {
+            "title": "Settings",
+            "subtitle": "Taxes, ZUS, reliefs",
+            "taxForm": "Tax Form",
+            "zus": "ZUS",
+            "voluntarySickness": "Voluntary Sickness Insurance",
+            "saveForVacation": "Save for Vacation",
+            "jointSettlement": "Joint Settlement",
+            "ipBox": "IP BOX",
+            "returnRelief": "Return Relief",
+            "pit0": "PIT 0"
+        },
+        "costs": {
+            "title": "Costs",
+            "subtitle": "Business expenses",
+            "addCost": "Add Cost",
+            "emptyState": "No costs added"
+        },
+        "results": {
+            "title": "Results",
+            "netIncome": "Net Income",
+            "afterTaxes": "After taxes and contributions",
+            "compareUOP": "Compare with Employment",
+            "details": "Details",
+            "save": "Save",
+            "pit": "PIT",
+            "vat": "VAT",
+            "zus": "ZUS",
+            "health": "Health"
+        }
+    },
+    "taxForms": {
+        "taxScale": "Tax Scale",
+        "flat19": "Flat Tax 19%",
+        "lumpSum": "Lump Sum"
+    },
+    "zusTypes": {
+        "full": "Full ZUS",
+        "small": "Small ZUS+",
+        "startup": "Startup Relief"
+    },
+    "pages": {
+        "uop": {
+            "title": "Employment Contract Calculator",
+            "description": "Tool for calculating salary for employment contract"
+        },
+        "company": {
+            "title": "Company Calculator",
+            "description": "Tool for calculating company settlements"
+        },
+        "currencies": {
+            "title": "Currency Calculator",
+            "description": "Tool for currency exchange calculations"
+        },
+        "guide": {
+            "title": "B2B Guide",
+            "content": "Guide content will be here..."
+        }
+    },
+    "theme": {
+        "switching": "Switching theme..."
+    },
+    "error": {
+        "title": "Something went wrong",
+        "message": "Sorry, an unexpected error occurred. Try refreshing the page.",
+        "reload": "Reload Page",
+        "details": "Error Details"
+    }
+}

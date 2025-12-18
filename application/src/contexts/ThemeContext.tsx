@@ -1,7 +1,8 @@
 import { createContext, useState, useCallback, type FC, type ReactNode } from 'react';
 import { getTheme, setTheme as saveTheme } from '../utils/cookies';
+import { ANIMATION } from '../constants/config';
 
-type Theme = 'light' | 'dark';
+export type Theme = 'light' | 'dark';
 
 interface ThemeContextType {
     theme: Theme;
@@ -18,13 +19,13 @@ export const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
     const toggleTheme = useCallback(() => {
         setIsLoading(true);
 
-        const newTheme = theme === 'light' ? 'dark' : 'light';
+        const newTheme: Theme = theme === 'light' ? 'dark' : 'light';
 
         setTheme(newTheme);
         saveTheme(newTheme);
         document.documentElement.classList.toggle('dark', newTheme === 'dark');
 
-        setTimeout(() => setIsLoading(false), 400);
+        setTimeout(() => setIsLoading(false), ANIMATION.THEME_TRANSITION);
     }, [theme]);
 
     return (

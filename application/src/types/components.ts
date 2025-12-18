@@ -39,3 +39,19 @@ export interface SelectFieldProps extends SelectHTMLAttributes<HTMLSelectElement
 export interface CheckboxFieldProps extends InputHTMLAttributes<HTMLInputElement> {
     label: string;
 }
+
+export interface ComingSoonPageProps {
+    title: string;
+    description: string;
+    icon: ReactNode;
+}
+
+export interface ErrorBoundaryProps {
+    children: ReactNode;
+    fallback?: ReactNode;
+}
+
+export interface ErrorBoundaryState {
+    hasError: boolean;
+    error?: Error;
+}

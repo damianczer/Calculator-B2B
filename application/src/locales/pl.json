@@ -1,0 +1,93 @@
+{
+    "common": {
+        "appName": "Calculator B2B",
+        "loading": "Ładowanie...",
+        "comingSoon": "Wkrótce"
+    },
+    "header": {
+        "guide": "Poradnik",
+        "b2b": "B2B",
+        "uop": "UOP",
+        "company": "Spółka",
+        "currencies": "Waluty"
+    },
+    "footer": {
+        "copyright": "Copyright © {{year}} {{appName}}. Wszelkie prawa zastrzeżone.",
+        "author": "Autor:"
+    },
+    "calculator": {
+        "revenue": {
+            "title": "Przychód",
+            "subtitle": "Dochody miesięczne",
+            "addRevenue": "Dodaj przychód",
+            "emptyState": "Brak dodanych źródeł przychodu"
+        },
+        "settings": {
+            "title": "Ustawienia",
+            "subtitle": "Podatki, ZUS, ulgi",
+            "taxForm": "Forma opodatkowania",
+            "zus": "ZUS",
+            "voluntarySickness": "Dobrowolne chorobowe",
+            "saveForVacation": "Odłóż na urlop",
+            "jointSettlement": "Rozliczenie wspólne",
+            "ipBox": "IP BOX",
+            "returnRelief": "Ulga na powrót",
+            "pit0": "PIT 0"
+        },
+        "costs": {
+            "title": "Koszty",
+            "subtitle": "Wydatki firmowe",
+            "addCost": "Dodaj koszt",
+            "emptyState": "Brak dodanych kosztów"
+        },
+        "results": {
+            "title": "Wyniki",
+            "netIncome": "Przychód netto",
+            "afterTaxes": "Po podatkach i składkach",
+            "compareUOP": "Porównaj z UOP",
+            "details": "Szczegóły",
+            "save": "Zapisz",
+            "pit": "PIT",
+            "vat": "VAT",
+            "zus": "ZUS",
+            "health": "Zdrowotna"
+        }
+    },
+    "taxForms": {
+        "taxScale": "Skala podatkowa",
+        "flat19": "Podatek liniowy 19%",
+        "lumpSum": "Ryczałt"
+    },
+    "zusTypes": {
+        "full": "Pełny ZUS",
+        "small": "Mały ZUS+",
+        "startup": "Ulga na start"
+    },
+    "pages": {
+        "uop": {
+            "title": "Kalkulator UOP",
+            "description": "Narzędzie do obliczania wynagrodzenia dla umowy o pracę"
+        },
+        "company": {
+            "title": "Kalkulator Spółka",
+            "description": "Narzędzie do obliczania rozliczeń dla spółki"
+        },
+        "currencies": {
+            "title": "Kalkulator Walut",
+            "description": "Narzędzie do przeliczania walut"
+        },
+        "guide": {
+            "title": "Poradnik B2B",
+            "content": "Treść poradnika będzie tutaj..."
+        }
+    },
+    "theme": {
+        "switching": "Przełączanie motywu..."
+    },
+    "error": {
+        "title": "Coś poszło nie tak",
+        "message": "Przepraszamy, wystąpił nieoczekiwany błąd. Spróbuj odświeżyć stronę.",
+        "reload": "Odśwież stronę",
+        "details": "Szczegóły błędu"
+    }
+}

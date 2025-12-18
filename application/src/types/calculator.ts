@@ -5,8 +5,20 @@ export interface TaxBreakdown {
     health: number;
 }
 
-export type TaxForm = 'Skala podatkowa' | 'Podatek liniowy 19%' | 'Ryczałt';
-export type ZUSType = 'Pełny ZUS' | 'Mały ZUS+' | 'Ulga na start';
+export const TaxForm = {
+    TAX_SCALE: 'taxScale',
+    FLAT_19: 'flat19',
+    LUMP_SUM: 'lumpSum'
+} as const;
+
+export const ZUSType = {
+    FULL: 'full',
+    SMALL: 'small',
+    STARTUP: 'startup'
+} as const;
+
+export type TaxForm = typeof TaxForm[keyof typeof TaxForm];
+export type ZUSType = typeof ZUSType[keyof typeof ZUSType];
 
 export interface RevenueCardProps {
     title?: string;
