@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { GuideSection } from '../GuideSection';
 import { ItemList } from '../ItemList';
 import { InfoBox } from '../InfoBox';
+import { ComparisonTable } from '../ComparisonTable';
 import { GUIDE_STYLES } from '../../../constants/styles';
 
 export const SummarySection = memo(() => {
@@ -11,6 +12,7 @@ export const SummarySection = memo(() => {
     return (
         <GuideSection id="summary" title={t('guide.summary.title')}>
             <div className="space-y-6">
+                <ComparisonTable />
                 <InfoBox title={t('guide.summary.taxScaleTitle')}>
                     <ItemList
                         iconType="bullet"
