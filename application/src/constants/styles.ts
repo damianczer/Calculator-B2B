@@ -1,8 +1,8 @@
 export const BUTTON_VARIANTS = {
-    primary: 'bg-slate-700 hover:bg-slate-800 text-white',
-    secondary: 'bg-green-700 hover:bg-green-800 text-white',
-    success: 'bg-white hover:bg-green-50 text-green-700',
-    ghost: 'bg-green-500/40 hover:bg-green-500 text-white',
+    primary: 'bg-slate-700 hover:bg-slate-800 dark:bg-slate-600 dark:hover:bg-slate-700 text-white',
+    secondary: 'bg-green-700 hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700 text-white',
+    success: 'bg-white hover:bg-green-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-green-700 dark:text-green-400',
+    ghost: 'bg-green-500/40 hover:bg-green-500 dark:bg-green-600/40 dark:hover:bg-green-600 text-white',
 } as const;
 
 export const BUTTON_SIZES = {
@@ -11,15 +11,15 @@ export const BUTTON_SIZES = {
 } as const;
 
 export const CARD_VARIANTS = {
-    default: 'bg-white border-gray-200',
-    success: 'bg-green-600 border-green-500',
+    default: 'bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700',
+    success: 'bg-green-600 dark:bg-green-700 border-green-500 dark:border-green-600',
 } as const;
 
 export const CARD_HEADER_VARIANTS = {
-    default: 'bg-slate-800 border-slate-700',
-    success: 'bg-green-600 border-green-500',
+    default: 'bg-slate-800 dark:bg-slate-900 border-slate-700 dark:border-slate-800',
+    success: 'bg-green-600 dark:bg-green-700 border-green-500 dark:border-green-600',
 } as const;
 
-export const SELECT_INPUT_CLASSES = 'w-full px-3 py-1.5 text-sm border border-gray-300 rounded focus:border-slate-600 focus:ring-1 focus:ring-slate-600 outline-none transition-all bg-white';
-export const CHECKBOX_INPUT_CLASSES = 'w-3.5 h-3.5 rounded border border-gray-400 text-slate-700 focus:ring-1 focus:ring-slate-600';
-export const LABEL_CLASSES = 'block text-xs font-semibold text-gray-700 uppercase';
+export const SELECT_INPUT_CLASSES = 'w-full px-3 py-1.5 text-sm border border-gray-300 dark:border-slate-600 rounded focus:border-slate-600 dark:focus:border-slate-400 focus:ring-1 focus:ring-slate-600 dark:focus:ring-slate-400 outline-none transition-all bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100';
+export const CHECKBOX_INPUT_CLASSES = 'w-3.5 h-3.5 rounded border border-gray-400 dark:border-slate-600 text-slate-700 dark:text-slate-400 focus:ring-1 focus:ring-slate-600 dark:focus:ring-slate-400 bg-white dark:bg-slate-900';
+export const LABEL_CLASSES = 'block text-xs font-semibold text-gray-700 dark:text-slate-300 uppercase';
