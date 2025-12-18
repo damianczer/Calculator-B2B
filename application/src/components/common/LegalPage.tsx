@@ -11,11 +11,13 @@ const LegalPage = memo<LegalPageProps>(({ translationKey, sectionsCount, showCon
     const { t } = useTranslation();
 
     return (
-        <div className="max-w-4xl mx-auto px-6 py-8">
-            <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-6">
-                {t(`${translationKey}.title`)}
-            </h1>
-            <div className="prose dark:prose-invert max-w-none">
+        <div className="h-full overflow-y-auto">
+            <div className="min-h-full flex items-center justify-center py-8">
+                <div className="max-w-4xl mx-auto px-6">
+                    <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-6">
+                        {t(`${translationKey}.title`)}
+                    </h1>
+                    <div className="prose dark:prose-invert max-w-none">
                 <p className="text-slate-600 dark:text-slate-400 mb-4">
                     {t(`${translationKey}.lastUpdated`, { date: new Date().toLocaleDateString() })}
                 </p>
@@ -47,6 +49,8 @@ const LegalPage = memo<LegalPageProps>(({ translationKey, sectionsCount, showCon
                         </p>
                     </section>
                 )}
+                </div>
+                </div>
             </div>
         </div>
     );
