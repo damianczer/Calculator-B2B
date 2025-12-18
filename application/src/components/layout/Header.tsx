@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React, { memo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { NAVIGATION_LINKS } from '../../constants/app';
@@ -17,7 +17,7 @@ const Header = memo<HeaderProps>(() => {
 
     return (
         <header className={HEADER_CLASSES}>
-            <div className="flex h-16 items-center justify-between mx-auto max-w-[1600px] px-4">
+            <div className="flex h-16 items-center justify-between mx-auto max-w-[1600px] px-6 lg:px-8">
                 <div className="flex items-center gap-4">
                     <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100 tracking-tight font-sans">
                         <span className="bg-gradient-to-r from-slate-900 to-slate-600 dark:from-slate-100
@@ -40,25 +40,30 @@ const Header = memo<HeaderProps>(() => {
                 <div className="flex items-center gap-4">
                     <nav className="hidden md:flex items-center" aria-label="Main navigation">
                         <div className="inline-flex bg-slate-100 dark:bg-slate-800 rounded-lg p-1 gap-1">
-                            {NAVIGATION_LINKS.map((link) => (
-                                <Link
-                                    key={link.path}
-                                    to={link.path}
-                                    className={`px-4 py-1.5 text-sm font-medium rounded-md transition-all duration-200 
-                                        ${location.pathname === link.path
-                                            ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 shadow-sm'
-                                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
-                                        }`}
-                                >
-                                    {t(link.labelKey)}
-                                </Link>
+                            {NAVIGATION_LINKS.map((link, index) => (
+                                <React.Fragment key={link.path}>
+                                    <Link
+                                        to={link.path}
+                                        className={`px-4 py-1.5 text-sm font-medium rounded-md transition-all duration-200 
+                                            ${location.pathname === link.path
+                                                ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 shadow-sm'
+                                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
+                                            }`}
+                                    >
+                                        {t(link.labelKey)}
+                                    </Link>
+                                    {index < NAVIGATION_LINKS.length - 1 && !NAVIGATION_LINKS.some(l => l.path === location.pathname)
+                                        && (
+                                            <div className="w-px h-6 bg-slate-300 dark:bg-slate-600 self-center" />
+                                        )}
+                                </React.Fragment>
                             ))}
                         </div>
                     </nav>
 
                     <button
                         onClick={toggleLanguage}
-                        className={`${HEADER_BUTTON_BASE} w-10 h-10 flex items-center justify-center font-medium text-sm`}
+                        className={`${HEADER_BUTTON_BASE} h-10 px-3 flex items-center justify-center font-medium text-sm`}
                         aria-label="Toggle language"
                     >
                         {language === 'pl' ? 'EN' : 'PL'}
@@ -66,7 +71,7 @@ const Header = memo<HeaderProps>(() => {
 
                     <button
                         onClick={toggleTheme}
-                        className={`${HEADER_BUTTON_BASE} w-10 h-10 flex items-center justify-center`}
+                        className={`${HEADER_BUTTON_BASE} h-10 px-3 flex items-center justify-center`}
                         aria-label="Toggle theme"
                     >
                         {theme === 'light' ? (

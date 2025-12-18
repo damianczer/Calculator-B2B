@@ -19,3 +19,43 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(148 163 184) rgb(241 245 249);
+}
+
+.dark * {
+  scrollbar-color: rgb(51 65 85) rgb(15 23 42);
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(241 245 249);
+}
+
+.dark *::-webkit-scrollbar-track {
+  background: rgb(15 23 42);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgb(148 163 184);
+  border-radius: 6px;
+  border: 3px solid rgb(241 245 249);
+}
+
+.dark *::-webkit-scrollbar-thumb {
+  background: rgb(51 65 85);
+  border: 3px solid rgb(15 23 42);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(100 116 139);
+}
+
+.dark *::-webkit-scrollbar-thumb:hover {
+  background: rgb(71 85 105);
+}

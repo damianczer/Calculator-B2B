@@ -81,6 +81,91 @@
             "content": "Treść poradnika będzie tutaj..."
         }
     },
+    "guide": {
+        "title": "Jak wybrać najlepszą formę opodatkowania dla działalności B2B?",
+        "subtitle": "Kompleksowe porównanie trzech głównych systemów podatkowych",
+        "intro": {
+            "title": "Wprowadzenie",
+            "description": "Przedsiębiorcy prowadzący działalność gospodarczą w Polsce mają obowiązek odprowadzania podatku PIT od osiąganych dochodów. Decyzja o wyborze systemu podatkowego należy do kluczowych podczas rejestracji firmy i ma bezpośredni wpływ na finalną kwotę zobowiązań wobec fiskusa.",
+            "factors": "Na decyzję o formie rozliczeń podatkowych wpływa szereg elementów:",
+            "factor1": "Charakter i profil prowadzonej działalności",
+            "factor2": "Szacunkowa wartość przychodów oraz wydatków biznesowych",
+            "factor3": "Dostępność i możliwość wykorzystania preferencji podatkowych",
+            "factor4": "Strategia rozliczenia wspólnie z współmałżonkiem"
+        },
+        "when": {
+            "title": "Terminy zgłoszenia wybranej formy opodatkowania",
+            "point1": "Maksymalnie do 20 dnia miesiąca po miesiącu, w którym otrzymano pierwszy przychód",
+            "point2": "Do ostatniego dnia roku podatkowego w przypadku pierwszego przychodu w grudniu",
+            "important": "Uwaga:",
+            "note": "Nie musisz składać żadnego dokumentu, jeśli wybierasz skalę progresywną - to automatyczna forma rozliczenia."
+        },
+        "taxScale": {
+            "title": "1. Skala progresywna (zasady ogólne)",
+            "ratesTitle": "Progi podatkowe:",
+            "rate1": "Maksymalnie 120 000 zł",
+            "rate2": "Kwoty przekraczające 120 000 zł",
+            "advantagesTitle": "Korzyści:",
+            "adv1": "Opcja wspólnego rozliczenia z partnerem życiowym",
+            "adv2": "Dostęp do szerokiej gamy odliczeń i preferencji",
+            "adv3": "Możliwość skorzystania z ulgi prorodzinnej",
+            "adv4": "Optymalna przy mniejszych zarobkach",
+            "obligationsTitle": "Wymogi formalne:",
+            "obl1": "Konieczność prowadzenia ewidencji księgowej (KPiR lub pełna księgowość)",
+            "obl2": "Comiesięczne wpłaty zaliczek podatkowych",
+            "obl3": "Roczne złożenie zeznania PIT-36",
+            "exampleTitle": "Obliczenie przykładowe:",
+            "example": "Przy rocznym dochodzie 100 000 zł → należny podatek wynosi 12 000 zł (stawka 12%)"
+        },
+        "flatTax": {
+            "title": "2. Podatek liniowy w wysokości 19%",
+            "rateLabel": "Jednolita stawka:",
+            "rateNote": "Bez względu na wielkość osiągniętego dochodu",
+            "advantagesTitle": "Korzyści:",
+            "adv1": "Korzystne rozwiązanie dla wyższych zarobków",
+            "adv2": "Łatwe planowanie obciążeń podatkowych",
+            "adv3": "Odliczenie składek na ubezpieczenia społeczne",
+            "limitationsTitle": "Restrykcje:",
+            "lim1": "Brak opcji wspólnego rozliczenia małżeńskiego",
+            "lim2": "Ograniczony dostęp do ulg i odliczeń",
+            "lim3": "Zakaz świadczenia usług na rzecz poprzedniego zakładu pracy",
+            "exampleTitle": "Obliczenie przykładowe:",
+            "example": "Osoba z rocznym dochodem 200 000 zł zapłaci: 200 000 zł × 19% = 38 000 zł (w systemie progresywnym: 120 000 zł × 12% + 80 000 zł × 32% = 40 000 zł)"
+        },
+        "lumpSum": {
+            "title": "3. Ewidencjonowany ryczałt od przychodów",
+            "ratesTitle": "Wysokość stawek:",
+            "rate1": "Działalność handlowa",
+            "rate2": "Świadczenie usług",
+            "rate3": "Zawody twórcze",
+            "advantagesTitle": "Korzyści:",
+            "adv1": "Uproszczona ewidencja (wystarczy rejestr przychodów)",
+            "adv2": "Opłacalne przy minimalnych kosztach prowadzenia działalności",
+            "adv3": "Możliwość odliczania składek ZUS",
+            "disadvantagesTitle": "Ograniczenia:",
+            "dis1": "Niemożność odliczenia faktycznie poniesionych kosztów",
+            "dis2": "Wyłączona opcja rozliczenia małżeńskiego",
+            "dis3": "Dostęp tylko do wybranych preferencji podatkowych",
+            "exampleTitle": "Obliczenie przykładowe:",
+            "example": "Specjalista IT (zawód twórczy) zarabiający 100 000 zł rocznie zapłaci: 100 000 zł × 17% = 17 000 zł (koszty nie mają znaczenia)"
+        },
+        "summary": {
+            "title": "Jak podjąć najlepszą decyzję?",
+            "taxScaleTitle": "Dla kogo skala progresywna?",
+            "taxScale1": "Osoby z dochodami nieprzekraczającymi 120 000 zł w skali roku",
+            "taxScale2": "Małżeństwa planujące wspólne rozliczenie",
+            "taxScale3": "Przedsiębiorcy korzystający aktywnie z ulg podatkowych",
+            "flatTaxTitle": "Dla kogo podatek liniowy?",
+            "flatTax1": "Osoby osiągające dochody powyżej 150 000 zł rocznie",
+            "flatTax2": "Firmy z wysokimi kosztami operacyjnymi",
+            "flatTax3": "Przedsiębiorcy niekorzystający z dodatkowych odliczeń",
+            "lumpSumTitle": "Dla kogo ryczałt?",
+            "lumpSum1": "Działalność charakteryzująca się niskimi kosztami",
+            "lumpSum2": "Branże objęte korzystnymi stawkami ryczałtu",
+            "lumpSum3": "Osoby ceniące prostotę w prowadzeniu księgowości",
+            "note": "Ważne: Decyzja o systemie opodatkowania powinna być dostosowana do specyfiki Twojej firmy. Zalecamy konsultację z profesjonalnym doradcą podatkowym lub biurem rachunkowym."
+        }
+    },
     "theme": {
         "switching": "Przełączanie motywu..."
     },
