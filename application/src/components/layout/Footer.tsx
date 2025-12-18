@@ -1,6 +1,8 @@
 import { memo, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { APP_NAME, SOCIAL_LINKS } from '../../constants/app';
+import { ROUTES } from '../../constants/routes';
 
 const Footer = memo(() => {
     const currentYear = useMemo(() => new Date().getFullYear(), []);
@@ -9,7 +11,7 @@ const Footer = memo(() => {
     return (
         <footer className="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white
          dark:bg-slate-900 transition-colors">
-            <div className="w-full py-4 flex justify-center px-4">
+            <div className="w-full py-6 flex justify-center px-4">
                 <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center sm:text-left">
                     <p className="text-sm text-slate-600 dark:text-slate-400">
                         {t('footer.copyright', { year: currentYear, appName: APP_NAME })}
@@ -27,6 +29,21 @@ const Footer = memo(() => {
                         >
                             {SOCIAL_LINKS.author.label}
                         </a>
+                    </div>
+                    <span className="hidden sm:inline text-slate-300 dark:text-slate-700 text-sm">|</span>
+                    <div className="flex items-center gap-4">
+                        <Link
+                            to={ROUTES.TERMS}
+                            className="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        >
+                            {t('footer.terms')}
+                        </Link>
+                        <Link
+                            to={ROUTES.PRIVACY}
+                            className="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        >
+                            {t('footer.privacy')}
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -13,7 +13,9 @@
     },
     "footer": {
         "copyright": "Copyright © {{year}} {{appName}}. All rights reserved.",
-        "author": "Author:"
+        "author": "Author:",
+        "terms": "Terms of service",
+        "privacy": "Privacy policy"
     },
     "calculator": {
         "revenue": {
@@ -168,6 +170,46 @@
     },
     "theme": {
         "switching": "Switching theme..."
+    },
+    "privacy": {
+        "title": "Privacy policy",
+        "lastUpdated": "Last updated: {{date}}",
+        "section1": {
+            "title": "1. General information",
+            "content": "This privacy policy outlines the principles of processing and protecting personal data of Calculator B2B application users. We respect your privacy and are committed to protecting your personal data."
+        },
+        "section2": {
+            "title": "2. Data collection",
+            "content": "The Calculator B2B application operates entirely client-side and does not send any personal data to a server. All calculations and data entered by users are stored locally in the browser and are not shared with third parties."
+        },
+        "section3": {
+            "title": "3. Cookies",
+            "content": "The application uses cookies solely to remember user preferences, such as language and theme selection. We do not use cookies for tracking users or for advertising purposes."
+        },
+        "contact": {
+            "title": "4. Contact",
+            "content": "If you have any questions or concerns about this privacy policy, you can contact us at:"
+        }
+    },
+    "terms": {
+        "title": "Terms of service",
+        "lastUpdated": "Last updated: {{date}}",
+        "section1": {
+            "title": "1. Acceptance of terms",
+            "content": "By using the Calculator B2B application, you accept these terms of service. If you do not agree with any of the terms, please discontinue use of the application."
+        },
+        "section2": {
+            "title": "2. Scope of liability",
+            "content": "The Calculator B2B application is intended for informational and educational purposes only. Calculation results are approximate and do not constitute tax or financial advice. We always recommend consulting with a qualified tax advisor or accountant before making tax-related decisions."
+        },
+        "section3": {
+            "title": "3. Applicable law",
+            "content": "Any disputes arising from the use of the application will be resolved in accordance with Polish law. The author reserves the right to modify these terms at any time."
+        },
+        "contact": {
+            "title": "4. Contact",
+            "content": "If you have any questions or concerns about these terms of service, you can contact us at:"
+        }
     },
     "error": {
         "title": "Something went wrong",

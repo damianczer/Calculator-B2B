@@ -13,7 +13,9 @@
     },
     "footer": {
         "copyright": "Copyright © {{year}} {{appName}}. Wszelkie prawa zastrzeżone.",
-        "author": "Autor:"
+        "author": "Autor:",
+        "terms": "Warunki korzystania",
+        "privacy": "Polityka prywatności"
     },
     "calculator": {
         "revenue": {
@@ -168,6 +170,46 @@
     },
     "theme": {
         "switching": "Przełączanie motywu..."
+    },
+    "privacy": {
+        "title": "Polityka prywatności",
+        "lastUpdated": "Ostatnia aktualizacja: {{date}}",
+        "section1": {
+            "title": "1. Informacje ogólne",
+            "content": "Niniejsza polityka prywatności określa zasady przetwarzania i ochrony danych osobowych użytkowników aplikacji Calculator B2B. Szanujemy Twoją prywatność i zobowiązujemy się do ochrony Twoich danych osobowych."
+        },
+        "section2": {
+            "title": "2. Zbierane dane",
+            "content": "Aplikacja Calculator B2B działa całkowicie po stronie przeglądarki i nie wysyła żadnych danych osobowych do serwera. Wszystkie obliczenia i dane wprowadzane przez użytkownika są przechowywane lokalnie w przeglądarce i nie są udostępniane stronom trzecim."
+        },
+        "section3": {
+            "title": "3. Pliki cookies",
+            "content": "Aplikacja wykorzystuje pliki cookies wyłącznie do zapamiętania preferencji użytkownika, takich jak wybór języka i motywu. Nie używamy cookies do śledzenia użytkowników ani do celów reklamowych."
+        },
+        "contact": {
+            "title": "4. Kontakt",
+            "content": "W razie wątpliwości lub pytań dotyczących polityki prywatności, możesz skontaktować się z nami pod adresem:"
+        }
+    },
+    "terms": {
+        "title": "Warunki korzystania",
+        "lastUpdated": "Ostatnia aktualizacja: {{date}}",
+        "section1": {
+            "title": "1. Akceptacja warunków",
+            "content": "Korzystając z aplikacji Calculator B2B, akceptujesz niniejsze warunki korzystania. Jeśli nie zgadzasz się z którymkolwiek z warunków, prosimy o zaprzestanie korzystania z aplikacji."
+        },
+        "section2": {
+            "title": "2. Zakres odpowiedzialności",
+            "content": "Aplikacja Calculator B2B służy wyłącznie do celów informacyjnych i edukacyjnych. Wyniki obliczeń mają charakter orientacyjny i nie stanowią porady podatkowej ani finansowej. Zawsze zalecamy konsultację z wykwalifikowanym doradcą podatkowym lub księgowym przed podjęciem decyzji dotyczących podatków."
+        },
+        "section3": {
+            "title": "3. Prawo właściwe",
+            "content": "Wszelkie spory wynikające z korzystania z aplikacji będą rozstrzygane zgodnie z prawem polskim. Autor zastrzega sobie prawo do modyfikacji niniejszych warunków w dowolnym czasie."
+        },
+        "contact": {
+            "title": "4. Kontakt",
+            "content": "W razie wątpliwości lub pytań dotyczących warunków korzystania, możesz skontaktować się z nami pod adresem:"
+        }
     },
     "error": {
         "title": "Coś poszło nie tak",
