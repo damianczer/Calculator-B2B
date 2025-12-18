@@ -81,6 +81,91 @@
             "content": "Guide content will be here..."
         }
     },
+    "guide": {
+        "title": "Which Form of Taxation to Choose When Starting a Business?",
+        "subtitle": "Comparison of tax scale, flat tax, and lump sum",
+        "intro": {
+            "title": "Introduction",
+            "description": "Personal Income Tax (PIT) is a mandatory levy that entrepreneurs must pay on their income. Choosing the right form of taxation is one of the most important decisions when starting a business, which can significantly affect the amount of taxes paid.",
+            "factors": "The choice of taxation form depends on many factors, including:",
+            "factor1": "Type of business activity",
+            "factor2": "Expected revenue and costs",
+            "factor3": "Possibility of using tax reliefs",
+            "factor4": "Plans for joint settlement with spouse"
+        },
+        "when": {
+            "title": "Who and When Must Choose a Form of Taxation?",
+            "point1": "By the 20th day of the month following the month of obtaining the first income",
+            "point2": "By the end of the tax year if the first income was obtained in December",
+            "important": "Important:",
+            "note": "When choosing the tax scale, no notification is required - it is the default form of taxation."
+        },
+        "taxScale": {
+            "title": "1. General Rules Taxation (Tax Scale)",
+            "ratesTitle": "Tax Rates:",
+            "rate1": "Up to 120,000 PLN",
+            "rate2": "Above 120,000 PLN",
+            "advantagesTitle": "Advantages:",
+            "adv1": "Possibility of joint settlement with spouse",
+            "adv2": "Access to most tax reliefs",
+            "adv3": "Child tax relief",
+            "adv4": "Favorable for lower incomes",
+            "obligationsTitle": "Obligations:",
+            "obl1": "Maintaining revenue and expense ledger or accounting books",
+            "obl2": "Calculating and paying monthly tax advances",
+            "obl3": "Filing annual PIT-36 declaration",
+            "exampleTitle": "Example:",
+            "example": "Annual income 100,000 PLN → Tax 12,000 PLN (12%)"
+        },
+        "flatTax": {
+            "title": "2. Flat Tax (19%)",
+            "rateLabel": "Fixed rate:",
+            "rateNote": "Regardless of income amount",
+            "advantagesTitle": "Advantages:",
+            "adv1": "Favorable for high incomes",
+            "adv2": "Predictable tax amount",
+            "adv3": "Ability to deduct social security contributions",
+            "limitationsTitle": "Limitations:",
+            "lim1": "No possibility of joint settlement with spouse",
+            "lim2": "No access to most tax reliefs",
+            "lim3": "Cannot provide services to former employer",
+            "exampleTitle": "Example:",
+            "example": "Entrepreneur with annual income of 200,000 PLN will pay tax: 200,000 PLN × 19% = 38,000 PLN (with tax scale it would be: 120,000 PLN × 12% + 80,000 PLN × 32% = 40,000 PLN)"
+        },
+        "lumpSum": {
+            "title": "3. Lump Sum on Recorded Revenue",
+            "ratesTitle": "Lump Sum Rates:",
+            "rate1": "Trade",
+            "rate2": "Services",
+            "rate3": "Liberal professions",
+            "advantagesTitle": "Advantages:",
+            "adv1": "Simple bookkeeping (revenue record only)",
+            "adv2": "Favorable with low costs",
+            "adv3": "Ability to deduct social security contributions",
+            "disadvantagesTitle": "Disadvantages:",
+            "dis1": "No possibility to deduct costs",
+            "dis2": "No joint settlement with spouse",
+            "dis3": "Limited tax reliefs",
+            "exampleTitle": "Example:",
+            "example": "Programmer (liberal profession) with annual revenue of 100,000 PLN will pay: 100,000 PLN × 17% = 17,000 PLN (regardless of incurred costs)"
+        },
+        "summary": {
+            "title": "Summary",
+            "taxScaleTitle": "When to Choose Tax Scale?",
+            "taxScale1": "With lower incomes (up to 120,000 PLN annually)",
+            "taxScale2": "When you want to settle jointly with spouse",
+            "taxScale3": "When you use many tax reliefs",
+            "flatTaxTitle": "When to Choose Flat Tax?",
+            "flatTax1": "With high incomes (above 150,000 PLN annually)",
+            "flatTax2": "When you have significant business costs",
+            "flatTax3": "When you don't plan to use tax reliefs",
+            "lumpSumTitle": "When to Choose Lump Sum?",
+            "lumpSum1": "When you have low business costs",
+            "lumpSum2": "With favorable lump sum rate for your industry",
+            "lumpSum3": "When you want simple bookkeeping",
+            "note": "Remember: Choosing the form of taxation is an individual decision that should take into account the specifics of your business. If in doubt, it is worth consulting an accountant or tax advisor."
+        }
+    },
     "theme": {
         "switching": "Switching theme..."
     },
