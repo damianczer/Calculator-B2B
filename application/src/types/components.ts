@@ -8,11 +8,6 @@ export interface HeaderProps {
     readonly title?: string;
 }
 
-export interface NavigationLink {
-    readonly href: string;
-    readonly label: string;
-}
-
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: 'primary' | 'secondary' | 'success' | 'ghost';
     size?: 'sm' | 'md';

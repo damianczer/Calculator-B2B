@@ -31,14 +31,14 @@ const SettingsCard: FC = () => {
                     <CheckboxField label="IP BOX" />
                 </div>
 
-                <div className="pt-3 border-t border-gray-200 space-y-2">
-                    <div className="flex items-center justify-between p-2 bg-gray-50 rounded text-xs border border-gray-300">
-                        <span className="font-medium text-gray-700">Ulga na powrót</span>
-                        <span className="text-gray-500">(85k)</span>
+                <div className="pt-3 border-t border-gray-200 dark:border-slate-700 space-y-2">
+                    <div className="flex items-center justify-between p-2 bg-gray-50 dark:bg-slate-900 rounded text-xs border border-gray-300 dark:border-slate-700">
+                        <span className="font-medium text-gray-700 dark:text-slate-300">Ulga na powrót</span>
+                        <span className="text-gray-500 dark:text-slate-500">(85k)</span>
                     </div>
-                    <div className="flex items-center justify-between p-2 bg-gray-50 rounded text-xs border border-gray-300">
-                        <span className="font-medium text-gray-700">PIT 0</span>
-                        <span className="text-gray-500">(soon)</span>
+                    <div className="flex items-center justify-between p-2 bg-gray-50 dark:bg-slate-900 rounded text-xs border border-gray-300 dark:border-slate-700">
+                        <span className="font-medium text-gray-700 dark:text-slate-300">PIT 0</span>
+                        <span className="text-gray-500 dark:text-slate-500">(soon)</span>
                     </div>
                 </div>
             </div>
