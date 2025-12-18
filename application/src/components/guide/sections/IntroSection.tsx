@@ -18,10 +18,10 @@ export const IntroSection = memo(() => {
             <ItemList
                 iconType="none"
                 items={[
-                    { text: t('guide.intro.factor1') },
-                    { text: t('guide.intro.factor2') },
-                    { text: t('guide.intro.factor3') },
-                    { text: t('guide.intro.factor4') }
+                    { text: t('guide.intro.factor1'), icon: <span className="text-slate-600 dark:text-slate-400 font-medium mr-2">1.</span> },
+                    { text: t('guide.intro.factor2'), icon: <span className="text-slate-600 dark:text-slate-400 font-medium mr-2">2.</span> },
+                    { text: t('guide.intro.factor3'), icon: <span className="text-slate-600 dark:text-slate-400 font-medium mr-2">3.</span> },
+                    { text: t('guide.intro.factor4'), icon: <span className="text-slate-600 dark:text-slate-400 font-medium mr-2">4.</span> }
                 ]}
             />
         </GuideSection>

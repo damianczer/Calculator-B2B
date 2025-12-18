@@ -166,6 +166,33 @@
             "lumpSum2": "Branże objęte korzystnymi stawkami ryczałtu",
             "lumpSum3": "Osoby ceniące prostotę w prowadzeniu księgowości",
             "note": "Ważne: Decyzja o systemie opodatkowania powinna być dostosowana do specyfiki Twojej firmy. Zalecamy konsultację z profesjonalnym doradcą podatkowym lub biurem rachunkowym."
+        },
+        "comparison": {
+            "title": "Porównanie form opodatkowania",
+            "feature": "Cecha",
+            "taxScale": "Skala podatkowa",
+            "flatTax": "Podatek liniowy",
+            "lumpSum": "Ryczałt",
+            "taxRate": "Stawka podatku",
+            "taxRateTaxScale": "12% i 32%",
+            "taxRateFlat": "19%",
+            "taxRateLump": "3% - 17%",
+            "taxFree": "Kwota wolna od podatku",
+            "taxFreeTaxScale": "30 000 zł + 85 528 zł (ulga dla klasy średniej)",
+            "taxFreeFlat": "85 528 zł (jeśli ulga włączona)",
+            "taxFreeLump": "85 528 zł (jeśli ulga włączona)",
+            "costs": "Koszty",
+            "costsTaxScale": "Odliczane",
+            "costsFlat": "Odliczane",
+            "costsLump": "Nieodliczane",
+            "jointSettlement": "Rozliczenie z małżonkiem",
+            "jointSettlementTaxScale": "Tak",
+            "jointSettlementFlat": "Nie",
+            "jointSettlementLump": "Nie",
+            "taxReliefs": "Ulgi podatkowe",
+            "taxReliefsTaxScale": "Pełny zakres",
+            "taxReliefsFlat": "Ograniczone",
+            "taxReliefsLump": "Ograniczone"
         }
     },
     "theme": {

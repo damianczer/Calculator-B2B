@@ -166,6 +166,33 @@
             "lumpSum2": "With favorable lump sum rate for your industry",
             "lumpSum3": "When you want simple bookkeeping",
             "note": "Remember: Choosing the form of taxation is an individual decision that should take into account the specifics of your business. If in doubt, it is worth consulting an accountant or tax advisor."
+        },
+        "comparison": {
+            "title": "Comparison of taxation forms",
+            "feature": "Feature",
+            "taxScale": "Tax scale",
+            "flatTax": "Flat tax",
+            "lumpSum": "Lump sum",
+            "taxRate": "Tax rate",
+            "taxRateTaxScale": "12% and 32%",
+            "taxRateFlat": "19%",
+            "taxRateLump": "3% - 17%",
+            "taxFree": "Tax-free amount",
+            "taxFreeTaxScale": "30,000 PLN + 85,528 PLN (middle class relief)",
+            "taxFreeFlat": "85,528 PLN (if relief enabled)",
+            "taxFreeLump": "85,528 PLN (if relief enabled)",
+            "costs": "Costs",
+            "costsTaxScale": "Deductible",
+            "costsFlat": "Deductible",
+            "costsLump": "Non-deductible",
+            "jointSettlement": "Joint settlement with spouse",
+            "jointSettlementTaxScale": "Yes",
+            "jointSettlementFlat": "No",
+            "jointSettlementLump": "No",
+            "taxReliefs": "Tax reliefs",
+            "taxReliefsTaxScale": "Full range",
+            "taxReliefsFlat": "Limited",
+            "taxReliefsLump": "Limited"
         }
     },
     "theme": {
