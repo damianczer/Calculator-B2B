@@ -2,7 +2,7 @@
     "common": {
         "appName": "Calculator B2B",
         "loading": "Loading...",
-        "comingSoon": "Coming Soon"
+        "comingSoon": "Coming soon"
     },
     "header": {
         "guide": "Guide",
@@ -19,32 +19,32 @@
         "revenue": {
             "title": "Revenue",
             "subtitle": "Monthly income",
-            "addRevenue": "Add Revenue",
+            "addRevenue": "Add revenue",
             "emptyState": "No revenue sources added"
         },
         "settings": {
             "title": "Settings",
             "subtitle": "Taxes, ZUS, reliefs",
-            "taxForm": "Tax Form",
+            "taxForm": "Tax form",
             "zus": "ZUS",
-            "voluntarySickness": "Voluntary Sickness Insurance",
-            "saveForVacation": "Save for Vacation",
-            "jointSettlement": "Joint Settlement",
+            "voluntarySickness": "Voluntary sickness insurance",
+            "saveForVacation": "Save for vacation",
+            "jointSettlement": "Joint settlement",
             "ipBox": "IP BOX",
-            "returnRelief": "Return Relief",
+            "returnRelief": "Return relief",
             "pit0": "PIT 0"
         },
         "costs": {
             "title": "Costs",
             "subtitle": "Business expenses",
-            "addCost": "Add Cost",
+            "addCost": "Add cost",
             "emptyState": "No costs added"
         },
         "results": {
             "title": "Results",
-            "netIncome": "Net Income",
+            "netIncome": "Net income",
             "afterTaxes": "After taxes and contributions",
-            "compareUOP": "Compare with Employment",
+            "compareUOP": "Compare with employment",
             "details": "Details",
             "save": "Save",
             "pit": "PIT",
@@ -54,35 +54,35 @@
         }
     },
     "taxForms": {
-        "taxScale": "Tax Scale",
-        "flat19": "Flat Tax 19%",
-        "lumpSum": "Lump Sum"
+        "taxScale": "Tax scale",
+        "flat19": "Flat tax 19%",
+        "lumpSum": "Lump sum"
     },
     "zusTypes": {
         "full": "Full ZUS",
         "small": "Small ZUS+",
-        "startup": "Startup Relief"
+        "startup": "Startup relief"
     },
     "pages": {
         "uop": {
-            "title": "Employment Contract Calculator",
+            "title": "Employment contract calculator",
             "description": "Tool for calculating salary for employment contract"
         },
         "company": {
-            "title": "Company Calculator",
+            "title": "Company calculator",
             "description": "Tool for calculating company settlements"
         },
         "currencies": {
-            "title": "Currency Calculator",
+            "title": "Currency calculator",
             "description": "Tool for currency exchange calculations"
         },
         "guide": {
-            "title": "B2B Guide",
+            "title": "B2B guide",
             "content": "Guide content will be here..."
         }
     },
     "guide": {
-        "title": "Which Form of Taxation to Choose When Starting a Business?",
+        "title": "Which form of taxation to choose when starting a business?",
         "subtitle": "Comparison of tax scale, flat tax, and lump sum",
         "intro": {
             "title": "Introduction",
@@ -101,8 +101,8 @@
             "note": "When choosing the tax scale, no notification is required - it is the default form of taxation."
         },
         "taxScale": {
-            "title": "1. General Rules Taxation (Tax Scale)",
-            "ratesTitle": "Tax Rates:",
+            "title": "1. General rules taxation (tax scale)",
+            "ratesTitle": "Tax rates:",
             "rate1": "Up to 120,000 PLN",
             "rate2": "Above 120,000 PLN",
             "advantagesTitle": "Advantages:",
@@ -118,7 +118,7 @@
             "example": "Annual income 100,000 PLN → Tax 12,000 PLN (12%)"
         },
         "flatTax": {
-            "title": "2. Flat Tax (19%)",
+            "title": "2. Flat tax (19%)",
             "rateLabel": "Fixed rate:",
             "rateNote": "Regardless of income amount",
             "advantagesTitle": "Advantages:",
@@ -133,8 +133,8 @@
             "example": "Entrepreneur with annual income of 200,000 PLN will pay tax: 200,000 PLN × 19% = 38,000 PLN (with tax scale it would be: 120,000 PLN × 12% + 80,000 PLN × 32% = 40,000 PLN)"
         },
         "lumpSum": {
-            "title": "3. Lump Sum on Recorded Revenue",
-            "ratesTitle": "Lump Sum Rates:",
+            "title": "3. Lump sum on recorded revenue",
+            "ratesTitle": "Lump sum rates:",
             "rate1": "Trade",
             "rate2": "Services",
             "rate3": "Liberal professions",
@@ -151,15 +151,15 @@
         },
         "summary": {
             "title": "Summary",
-            "taxScaleTitle": "When to Choose Tax Scale?",
+            "taxScaleTitle": "When to choose tax scale?",
             "taxScale1": "With lower incomes (up to 120,000 PLN annually)",
             "taxScale2": "When you want to settle jointly with spouse",
             "taxScale3": "When you use many tax reliefs",
-            "flatTaxTitle": "When to Choose Flat Tax?",
+            "flatTaxTitle": "When to choose flat tax?",
             "flatTax1": "With high incomes (above 150,000 PLN annually)",
             "flatTax2": "When you have significant business costs",
             "flatTax3": "When you don't plan to use tax reliefs",
-            "lumpSumTitle": "When to Choose Lump Sum?",
+            "lumpSumTitle": "When to choose lump sum?",
             "lumpSum1": "When you have low business costs",
             "lumpSum2": "With favorable lump sum rate for your industry",
             "lumpSum3": "When you want simple bookkeeping",
@@ -172,7 +172,7 @@
     "error": {
         "title": "Something went wrong",
         "message": "Sorry, an unexpected error occurred. Try refreshing the page.",
-        "reload": "Reload Page",
-        "details": "Error Details"
+        "reload": "Reload page",
+        "details": "Error details"
     }
 }
