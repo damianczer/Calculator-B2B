@@ -5,7 +5,7 @@ import { CARD_VARIANTS } from '../../constants/styles';
 
 const Card: FC<CardProps> = memo(({ children, variant = 'default' }) => {
     return (
-        <div className={`rounded-lg shadow border overflow-hidden flex flex-col h-full ${CARD_VARIANTS[variant]}`}>
+        <div className={`rounded-lg shadow border overflow-hidden flex flex-col ${CARD_VARIANTS[variant]}`}>
             {children}
         </div>
     );

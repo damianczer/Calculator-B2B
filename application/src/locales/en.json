@@ -79,8 +79,7 @@
             "description": "Tool for currency exchange calculations"
         },
         "guide": {
-            "title": "B2B guide",
-            "content": "Guide content will be here..."
+            "title": "B2B guide"
         }
     },
     "guide": {
@@ -236,6 +235,38 @@
         "contact": {
             "title": "4. Contact",
             "content": "If you have any questions or concerns about these terms of service, you can contact us at:"
+        }
+    },
+    "currencies": {
+        "title": "Currency calculator",
+        "description": "Current NBP exchange rates and currency converter",
+        "refresh": "Refresh rates",
+        "error": "Failed to fetch exchange rates",
+        "retry": "Try again",
+        "converter": {
+            "title": "Currency converter",
+            "swap": "Swap currencies"
+        },
+        "card": {
+            "rateLabel": "Rate {{rate}} PLN",
+            "baseCurrency": "Base currency",
+            "rateDate": "Rate date:",
+            "lastUpdate": "Last update:"
+        },
+        "converterDescription": {
+            "title": "Receiving payment in foreign currency?",
+            "subtitle": "Use our currency converter"
+        },
+        "names": {
+            "USD": "US dollar",
+            "EUR": "euro",
+            "GBP": "pound sterling",
+            "CHF": "Swiss franc",
+            "JPY": "Japanese yen",
+            "PLN": "Polish zloty",
+            "BTC": "Bitcoin",
+            "ETH": "Ethereum",
+            "XAU": "Gold"
         }
     },
     "error": {
