@@ -79,8 +79,7 @@
             "description": "Narzędzie do przeliczania walut"
         },
         "guide": {
-            "title": "Poradnik B2B",
-            "content": "Treść poradnika będzie tutaj..."
+            "title": "Poradnik B2B"
         }
     },
     "guide": {
@@ -236,6 +235,38 @@
         "contact": {
             "title": "4. Kontakt",
             "content": "W razie wątpliwości lub pytań dotyczących warunków korzystania, możesz skontaktować się z nami pod adresem:"
+        }
+    },
+    "currencies": {
+        "title": "Kalkulator walut",
+        "description": "Aktualne kursy NBP i przelicznik walut",
+        "refresh": "Odśwież kursy",
+        "error": "Nie udało się pobrać kursów walut",
+        "retry": "Spróbuj ponownie",
+        "converter": {
+            "title": "Przelicznik walut",
+            "swap": "Zamień waluty"
+        },
+        "card": {
+            "rateLabel": "Kurs {{rate}} PLN",
+            "baseCurrency": "Waluta bazowa",
+            "rateDate": "Data kursu:",
+            "lastUpdate": "Ostatnia aktualizacja:"
+        },
+        "converterDescription": {
+            "title": "Dostajesz przelew w innej walucie?",
+            "subtitle": "Skorzystaj z przelicznika walut"
+        },
+        "names": {
+            "USD": "Dolar Amerykański",
+            "EUR": "Euro",
+            "GBP": "Funt Szterling",
+            "CHF": "Frank Szwajcarski",
+            "JPY": "Jen (Japonia)",
+            "PLN": "Złoty Polski",
+            "BTC": "Bitcoin",
+            "ETH": "Ethereum",
+            "XAU": "Złoto"
         }
     },
     "error": {

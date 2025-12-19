@@ -13,7 +13,7 @@ const LoadingSpinner: FC = memo(() => {
                     <div className="absolute inset-0 border-4 border-transparent border-t-slate-100 rounded-full animate-spin"></div>
                 </div>
                 <p className="text-sm font-medium text-slate-300 animate-pulse">
-                    {t('theme.switching')}
+                    {t('common.loading')}
                 </p>
             </div>
         </div>
