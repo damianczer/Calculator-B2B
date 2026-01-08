@@ -20,7 +20,7 @@ export const CustomDropdown = memo(({ value, onChange, options, className = '', 
     const updatePosition = useCallback(() => {
         if (listRef.current && buttonRef.current) {
             const rect = buttonRef.current.getBoundingClientRect();
-            listRef.current.style.bottom = `${window.innerHeight - rect.top - window.scrollY}px`;
+            listRef.current.style.top = `${rect.bottom + window.scrollY}px`;
             listRef.current.style.left = `${rect.left + window.scrollX}px`;
             listRef.current.style.width = `${rect.width}px`;
         }
@@ -127,7 +127,7 @@ export const CustomDropdown = memo(({ value, onChange, options, className = '', 
     return (
         <div ref={dropdownRef} className="relative">
             {label && (
-                <label className="block text-xs font-semibold text-gray-700 dark:text-slate-300 uppercase mb-1.5">
+                <label className="block text-xs font-semibold text-gray-700 dark:text-slate-300 mb-1">
                     {label}
                 </label>
             )}
@@ -135,11 +135,11 @@ export const CustomDropdown = memo(({ value, onChange, options, className = '', 
                 ref={buttonRef}
                 type="button"
                 onClick={toggleDropdown}
-                className={`${className} relative cursor-pointer text-left`}
+                className={`${className} relative cursor-pointer`}
                 aria-haspopup="listbox"
                 {...(isOpen && { 'aria-expanded': 'true' })}
             >
-                <span className="block pr-10">{selectedOption?.code || value}</span>
+                <span className="block">{selectedOption?.code || value}{(label === 'VAT' || label === 'Stawka ryczałtu') ? '%' : ''}{selectedOption?.name ? ` (${selectedOption.name})` : ''}</span>
                 <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                     <ChevronDownIcon className="w-5 h-5 text-gray-500" />
                 </span>
@@ -159,7 +159,7 @@ export const CustomDropdown = memo(({ value, onChange, options, className = '', 
                                 <div
                                     key={option.code}
                                     onClick={() => handleSelect(option.code)}
-                                    className={`px-4 py-3 cursor-pointer transition-colors text-base font-medium text-center
+                                    className={`px-3 py-2 cursor-pointer transition-colors text-sm text-center
                                     ${isSelected
                                             ? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100'
                                             : 'text-slate-900 dark:text-slate-100'
@@ -172,7 +172,7 @@ export const CustomDropdown = memo(({ value, onChange, options, className = '', 
                                     role="option"
                                     {...(isSelected && { 'aria-selected': 'true' })}
                                 >
-                                    {option.code}
+                                    {option.code}{(label === 'VAT' || label === 'Stawka ryczałtu') ? '%' : ''}{option.name ? ` (${option.name})` : ''}
                                 </div>
                             );
                         })}

@@ -17,7 +17,7 @@ export const useZUSTypes = () => {
 
     return useMemo(() => [
         { value: ZUSType.FULL, label: t('zusTypes.full') },
-        { value: ZUSType.SMALL, label: t('zusTypes.small') },
-        { value: ZUSType.STARTUP, label: t('zusTypes.startup') }
+        { value: ZUSType.SMALL, label: `${t('zusTypes.small')} (${t('zusTypes.smallDuration')})` },
+        { value: ZUSType.STARTUP, label: `${t('zusTypes.startup')} (${t('zusTypes.startupDuration')})` }
     ], [t]);
 };

@@ -2,7 +2,9 @@
     "common": {
         "appName": "Calculator B2B",
         "loading": "Ładowanie...",
-        "comingSoon": "Wkrótce"
+        "comingSoon": "Wkrótce",
+        "total": "Suma",
+        "perMonth": "PLN/mies."
     },
     "header": {
         "guide": "Poradnik",
@@ -21,6 +23,12 @@
         "revenue": {
             "title": "Przychód",
             "subtitle": "Dochody miesięczne",
+            "source": "Źródło",
+            "monthlyRevenue": "Przychód miesięczny",
+            "dailyRate": "Stawka dzienna",
+            "hourlyRate": "Stawka godzinowa",
+            "daysPerMonth": "Dni/mies.",
+            "hoursPerDay": "Godz./dzień",
             "addRevenue": "Dodaj przychód",
             "emptyState": "Brak dodanych źródeł przychodu"
         },
@@ -28,31 +36,52 @@
             "title": "Ustawienia",
             "subtitle": "Podatki, ZUS, ulgi",
             "taxForm": "Forma opodatkowania",
+            "lumpSumRate": "Stawka ryczałtu",
             "zus": "ZUS",
             "voluntarySickness": "Dobrowolne chorobowe",
+            "voluntarySicknessNotAllowed": "(niedozwolone przez pierwsze 6 mies.)",
             "saveForVacation": "Odłóż na urlop",
             "jointSettlement": "Rozliczenie wspólne",
             "ipBox": "IP BOX",
             "returnRelief": "Ulga na powrót",
-            "pit0": "PIT 0"
+            "pit0": "Ulga na powrót (PIT-0)",
+            "pit0Limit": "85 528 zł/rok",
+            "pit0Description": "Zwolnienie z PIT dla osób wracających do Polski po min. 3 latach pracy za granicą. Ulga trwa 4 lata.",
+            "lumpSumRates": {
+                "2": "usługi gastronomiczne",
+                "3": "produkcja rolna, artykuły spożywcze",
+                "5.5": "usługi medyczne, edukacyjne",
+                "8.5": "usługi budowlane, transportowe",
+                "10": "działalność wytwórcza",
+                "12": "usługi IT, programowanie",
+                "12.5": "doradztwo, konsulting",
+                "14": "wolne zawody medyczne",
+                "15": "handel, gastronomia",
+                "17": "wolne zawody (prawnicy, architekci)"
+            }
         },
         "costs": {
             "title": "Koszty",
             "subtitle": "Wydatki firmowe",
+            "costName": "Nazwa kosztu",
+            "monthly": "PLN/mies.",
+            "yearly": "PLN/rok",
             "addCost": "Dodaj koszt",
             "emptyState": "Brak dodanych kosztów"
         },
         "results": {
             "title": "Wyniki",
             "netIncome": "Przychód netto",
+            "invoiceTotal": "Kwota na fakturze",
             "afterTaxes": "Po podatkach i składkach",
             "compareUOP": "Porównaj z UOP",
+            "yearlySettlement": "Pokaż rozliczenie roczne",
             "details": "Szczegóły",
             "save": "Zapisz",
             "pit": "PIT",
             "vat": "VAT",
             "zus": "ZUS",
-            "health": "Zdrowotna"
+            "health": "NFZ"
         }
     },
     "taxForms": {
@@ -63,7 +92,9 @@
     "zusTypes": {
         "full": "Pełny ZUS",
         "small": "Mały ZUS+",
-        "startup": "Ulga na start"
+        "smallDuration": "24 miesiące",
+        "startup": "Ulga na start",
+        "startupDuration": "6 miesięcy"
     },
     "pages": {
         "uop": {

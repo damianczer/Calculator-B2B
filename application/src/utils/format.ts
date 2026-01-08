@@ -1,10 +1,21 @@
 import { CURRENCY_CONFIG } from '../constants/currency';
 
+export const formatNumber = (value: number | string, decimals: number = 2): string => {
+    const num = typeof value === 'string' ? parseFloat(value) : value;
+    if (isNaN(num)) return '0,00';
+
+    const fixed = num.toFixed(decimals);
+    const [integerPart, decimalPart] = fixed.split('.');
+    const formattedInteger = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+
+    return decimalPart ? `${formattedInteger},${decimalPart}` : formattedInteger;
+};
+
 export const formatCurrency = (amount: number | undefined): string => {
     if (amount === undefined || amount === null || isNaN(amount)) {
-        return '0.00 zł';
+        return '0,00 zł';
     }
-    return `${amount.toFixed(2)} zł`;
+    return `${formatNumber(amount, 2)} zł`;
 };
 
 export const formatPercentage = (value: number): string => {

@@ -2,7 +2,9 @@
     "common": {
         "appName": "Calculator B2B",
         "loading": "Loading...",
-        "comingSoon": "Coming soon"
+        "comingSoon": "Coming soon",
+        "total": "Total",
+        "perMonth": "PLN/month"
     },
     "header": {
         "guide": "Guide",
@@ -21,6 +23,12 @@
         "revenue": {
             "title": "Revenue",
             "subtitle": "Monthly income",
+            "source": "Source",
+            "monthlyRevenue": "Monthly revenue",
+            "dailyRate": "Daily rate",
+            "hourlyRate": "Hourly rate",
+            "daysPerMonth": "Days/month",
+            "hoursPerDay": "Hours/day",
             "addRevenue": "Add revenue",
             "emptyState": "No revenue sources added"
         },
@@ -28,31 +36,52 @@
             "title": "Settings",
             "subtitle": "Taxes, ZUS, reliefs",
             "taxForm": "Tax form",
+            "lumpSumRate": "Lump sum rate",
             "zus": "ZUS",
             "voluntarySickness": "Voluntary sickness insurance",
+            "voluntarySicknessNotAllowed": "(not allowed for first 6 months)",
             "saveForVacation": "Save for vacation",
             "jointSettlement": "Joint settlement",
             "ipBox": "IP BOX",
             "returnRelief": "Return relief",
-            "pit0": "PIT 0"
+            "pit0": "Return relief (PIT-0)",
+            "pit0Limit": "85,528 PLN/year",
+            "pit0Description": "Tax exemption for people returning to Poland after min. 3 years of work abroad. Relief lasts 4 years.",
+            "lumpSumRates": {
+                "2": "catering services",
+                "3": "agricultural production, food products",
+                "5.5": "medical, educational services",
+                "8.5": "construction, transportation services",
+                "10": "manufacturing activity",
+                "12": "IT services, programming",
+                "12.5": "consulting, advisory",
+                "14": "medical professions",
+                "15": "trade, catering",
+                "17": "liberal professions (lawyers, architects)"
+            }
         },
         "costs": {
             "title": "Costs",
             "subtitle": "Business expenses",
+            "costName": "Cost name",
+            "monthly": "PLN/month",
+            "yearly": "PLN/year",
             "addCost": "Add cost",
             "emptyState": "No costs added"
         },
         "results": {
             "title": "Results",
             "netIncome": "Net income",
+            "invoiceTotal": "Invoice total",
             "afterTaxes": "After taxes and contributions",
             "compareUOP": "Compare with employment",
+            "yearlySettlement": "Show yearly settlement",
             "details": "Details",
             "save": "Save",
             "pit": "PIT",
             "vat": "VAT",
             "zus": "ZUS",
-            "health": "Health"
+            "health": "NFZ"
         }
     },
     "taxForms": {
@@ -63,7 +92,9 @@
     "zusTypes": {
         "full": "Full ZUS",
         "small": "Small ZUS+",
-        "startup": "Startup relief"
+        "smallDuration": "24 months",
+        "startup": "Startup relief",
+        "startupDuration": "6 months"
     },
     "pages": {
         "uop": {
