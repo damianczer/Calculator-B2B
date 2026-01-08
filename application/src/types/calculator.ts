@@ -5,6 +5,17 @@ export interface TaxBreakdown {
     health: number;
 }
 
+export interface CalculatorSettings {
+    taxForm: string;
+    zusType: string;
+    lumpSumRate: string;
+    voluntarySickness: boolean;
+    saveForVacation: boolean;
+    jointSettlement: boolean;
+    ipBox: boolean;
+    pit0: boolean;
+}
+
 export const TaxForm = {
     TAX_SCALE: 'taxScale',
     FLAT_19: 'flat19',
@@ -20,16 +31,8 @@ export const ZUSType = {
 export type TaxForm = typeof TaxForm[keyof typeof TaxForm];
 export type ZUSType = typeof ZUSType[keyof typeof ZUSType];
 
-export interface RevenueCardProps {
-    title?: string;
-    totalRevenue?: number;
-}
-
-export interface CostsCardProps {
-    totalCosts?: number;
-}
-
 export interface ResultsCardProps {
     netIncome?: number;
     breakdown?: TaxBreakdown;
+    invoiceTotal?: number;
 }

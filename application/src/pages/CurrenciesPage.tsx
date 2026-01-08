@@ -24,7 +24,7 @@ const CurrenciesPage = memo(() => {
                     <p className="text-red-600 dark:text-red-400 mb-4">{error}</p>
                     <button
                         onClick={refresh}
-                        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                        className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                         aria-label={t('currencies.retry')}
                     >
                         {t('currencies.retry')}
@@ -52,7 +52,7 @@ const CurrenciesPage = memo(() => {
                             <button
                                 onClick={refresh}
                                 disabled={loading}
-                                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 
+                                className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 
                                 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm 
                                 font-medium whitespace-nowrap"
                                 aria-label={t('currencies.refresh')}

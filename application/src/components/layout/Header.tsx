@@ -6,7 +6,7 @@ import { ROUTES } from '../../constants/routes';
 import { HEADER_CLASSES } from '../../constants/styles';
 import { useTheme } from '../../hooks/useTheme';
 import { useLanguage } from '../../hooks/useLanguage';
-import { SunIcon, MoonIcon } from '../common/icons';
+import { SunIcon, MoonIcon, CalculatorIcon } from '../common/icons';
 import type { HeaderProps } from '../../types/components';
 
 const Header = memo<HeaderProps>(() => {
@@ -20,7 +20,8 @@ const Header = memo<HeaderProps>(() => {
             <div className="mx-auto max-w-[1600px] px-4 lg:px-8">
                 <div className="hidden md:flex h-16 items-center justify-between">
                     <div className="flex items-center gap-4 flex-shrink-0">
-                        <h1 className="text-2xl font-bold tracking-tight font-sans whitespace-nowrap">
+                        <h1 className="text-2xl font-bold tracking-tight font-sans whitespace-nowrap flex items-center gap-2">
+                            <CalculatorIcon className="w-7 h-7 text-white" />
                             <span className="text-white">
                                 Calculator
                             </span>
@@ -85,7 +86,8 @@ const Header = memo<HeaderProps>(() => {
                 <div className="md:hidden py-3 space-y-3">
                     <div className="flex items-center justify-between pl-2">
                         <div className="flex items-center gap-2">
-                            <h1 className="text-lg font-bold tracking-tight font-sans whitespace-nowrap">
+                            <h1 className="text-lg font-bold tracking-tight font-sans whitespace-nowrap flex items-center gap-1.5">
+                                <CalculatorIcon className="w-5 h-5 text-white" />
                                 <span className="text-white">Calculator</span>
                                 {' '}
                                 <span className="text-blue-100">B2B</span>

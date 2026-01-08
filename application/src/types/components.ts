@@ -24,6 +24,7 @@ export interface CardHeaderProps {
     title: string;
     subtitle?: string;
     variant?: 'default' | 'success';
+    icon?: ReactNode;
 }
 
 export interface EmptyStateProps {
