@@ -52,8 +52,8 @@ class ErrorBoundaryClass extends Component<ErrorBoundaryProps & WithTranslation,
                                  dark:hover:text-slate-300 font-medium">
                                     {t('error.details')}
                                 </summary>
-                                <pre className="mt-2 p-4 bg-slate-100 dark:bg-slate-900 rounded text-xs max-h-40 overflow-y-auto
-                                 text-red-600 dark:text-red-400 whitespace-pre-wrap break-words">
+                                <pre className="mt-2 p-4 bg-slate-100 dark:bg-slate-900 rounded text-xs max-h-40
+                                 overflow-y-auto text-red-600 dark:text-red-400 whitespace-pre-wrap break-words">
                                     {this.state.error.toString()}
                                     {this.state.error.stack && `\n\n${this.state.error.stack}`}
                                 </pre>

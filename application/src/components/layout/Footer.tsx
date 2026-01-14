@@ -9,7 +9,8 @@ const Footer = memo(() => {
     const { t } = useTranslation();
 
     return (
-        <footer className="mt-auto bg-white dark:bg-slate-900 transition-colors shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] dark:shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.3)]">
+        <footer className="mt-auto bg-white dark:bg-slate-900 transition-colors 
+        shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] dark:shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.3)]">
             <div className="w-full py-3 sm:py-4 lg:py-6 flex justify-center px-4">
                 <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center sm:text-left">
                     <p className="text-sm text-slate-600 dark:text-slate-400">

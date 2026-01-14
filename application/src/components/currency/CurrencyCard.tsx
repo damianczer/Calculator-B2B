@@ -66,7 +66,8 @@ export const CurrencyCard = memo<CurrencyCardProps>(({ rate, lastUpdate }) => {
                     <>
                         <div className={CURRENCY_CARD_INFO_CLASSES}>
                             <span>{t('currencies.card.rateDate')}</span>
-                            <time dateTime={rate.date} className={CURRENCY_CARD_INFO_VALUE_CLASSES}>{formatDate(rate.date, locale)}</time>
+                            <time dateTime={rate.date} className={CURRENCY_CARD_INFO_VALUE_CLASSES}>
+                                {formatDate(rate.date, locale)}</time>
                         </div>
                         <div className={`${CURRENCY_CARD_INFO_CLASSES} mt-1`}>
                             <span>{t('currencies.card.lastUpdate')}</span>

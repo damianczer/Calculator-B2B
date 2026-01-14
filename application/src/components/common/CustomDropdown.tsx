@@ -17,6 +17,7 @@ export const CustomDropdown = memo(({ value, onChange, options, className = '', 
     const listRef = useRef<HTMLDivElement>(null);
     const buttonRef = useRef<HTMLButtonElement>(null);
     const selectedOption = options.find(opt => opt.code === value);
+
     const updatePosition = useCallback(() => {
         if (listRef.current && buttonRef.current) {
             const rect = buttonRef.current.getBoundingClientRect();
@@ -26,25 +27,27 @@ export const CustomDropdown = memo(({ value, onChange, options, className = '', 
         }
     }, []);
 
-    useEffect(() => {
-        if (isOpen) {
-            updatePosition();
-        }
-    }, [isOpen, updatePosition]);
+    const handleSelect = useCallback((code: string) => {
+        onChange(code);
+        setIsOpen(false);
+        setHighlightedIndex(-1);
+    }, [onChange]);
+
+    const toggleDropdown = useCallback(() => {
+        setIsOpen(prev => {
+            if (!prev) {
+                const currentIndex = options.findIndex(opt => opt.code === value);
+                setHighlightedIndex(currentIndex);
+            }
+            return !prev;
+        });
+    }, [options, value]);
 
     useEffect(() => {
         if (!isOpen) return;
 
-        window.addEventListener('resize', updatePosition);
-        window.addEventListener('scroll', updatePosition, true);
+        updatePosition();
 
-        return () => {
-            window.removeEventListener('resize', updatePosition);
-            window.removeEventListener('scroll', updatePosition, true);
-        };
-    }, [isOpen, updatePosition]);
-
-    useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node) &&
                 listRef.current && !listRef.current.contains(event.target as Node)) {
@@ -53,20 +56,12 @@ export const CustomDropdown = memo(({ value, onChange, options, className = '', 
             }
         };
 
-        if (isOpen) {
-            document.addEventListener('mousedown', handleClickOutside);
-            return () => document.removeEventListener('mousedown', handleClickOutside);
-        }
-    }, [isOpen]);
-
-    useEffect(() => {
-        if (!isOpen) return;
-
         const handleKeyDown = (e: KeyboardEvent) => {
             switch (e.key) {
                 case 'Escape':
                     setIsOpen(false);
                     setHighlightedIndex(-1);
+                    buttonRef.current?.focus();
                     break;
                 case 'ArrowDown':
                     e.preventDefault();
@@ -81,9 +76,7 @@ export const CustomDropdown = memo(({ value, onChange, options, className = '', 
                 case 'Enter':
                     e.preventDefault();
                     if (highlightedIndex >= 0) {
-                        onChange(options[highlightedIndex].code);
-                        setIsOpen(false);
-                        setHighlightedIndex(-1);
+                        handleSelect(options[highlightedIndex].code);
                     }
                     break;
                 case 'Home':
@@ -97,32 +90,30 @@ export const CustomDropdown = memo(({ value, onChange, options, className = '', 
             }
         };
 
+        const handleResize = () => updatePosition();
+        const handleScroll = () => updatePosition();
+
+        document.addEventListener('mousedown', handleClickOutside);
         document.addEventListener('keydown', handleKeyDown);
-        return () => document.removeEventListener('keydown', handleKeyDown);
-    }, [isOpen, highlightedIndex, options, onChange]);
+        window.addEventListener('resize', handleResize);
+        window.addEventListener('scroll', handleScroll, true);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('scroll', handleScroll, true);
+        };
+    }, [isOpen, highlightedIndex, options, handleSelect, updatePosition]);
 
     useEffect(() => {
         if (highlightedIndex >= 0 && listRef.current) {
-            const highlightedElement = listRef.current.children[highlightedIndex] as HTMLElement;
+            const highlightedElement = listRef.current.children[0]?.children[highlightedIndex] as HTMLElement;
             if (highlightedElement) {
                 highlightedElement.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
             }
         }
     }, [highlightedIndex]);
-
-    const handleSelect = (code: string) => {
-        onChange(code);
-        setIsOpen(false);
-        setHighlightedIndex(-1);
-    };
-
-    const toggleDropdown = () => {
-        setIsOpen(!isOpen);
-        if (!isOpen) {
-            const currentIndex = options.findIndex(opt => opt.code === value);
-            setHighlightedIndex(currentIndex);
-        }
-    };
 
     return (
         <div ref={dropdownRef} className="relative">
@@ -139,7 +130,8 @@ export const CustomDropdown = memo(({ value, onChange, options, className = '', 
                 aria-haspopup="listbox"
                 {...(isOpen && { 'aria-expanded': 'true' })}
             >
-                <span className="block">{selectedOption?.code || value}{(label === 'VAT' || label === 'Stawka ryczałtu') ? '%' : ''}{selectedOption?.name ? ` (${selectedOption.name})` : ''}</span>
+                <span className="block">{selectedOption?.code || value}{(label === 'VAT' || label === 'Stawka ryczałtu')
+                    ? '%' : ''}{selectedOption?.name ? ` (${selectedOption.name})` : ''}</span>
                 <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                     <ChevronDownIcon className="w-5 h-5 text-gray-500" />
                 </span>
@@ -172,7 +164,8 @@ export const CustomDropdown = memo(({ value, onChange, options, className = '', 
                                     role="option"
                                     {...(isSelected && { 'aria-selected': 'true' })}
                                 >
-                                    {option.code}{(label === 'VAT' || label === 'Stawka ryczałtu') ? '%' : ''}{option.name ? ` (${option.name})` : ''}
+                                    {option.code}{(label === 'VAT' || label === 'Stawka ryczałtu') ? '%' : ''}{option.name
+                                        ? ` (${option.name})` : ''}
                                 </div>
                             );
                         })}

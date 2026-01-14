@@ -93,7 +93,8 @@ export const ComparisonTable = memo(() => {
                             return (
                                 <tr
                                     key={row.featureKey}
-                                    className={isEven ? 'bg-white dark:bg-slate-900' : 'bg-slate-50 dark:bg-slate-800/50'}
+                                    className={isEven ? 'bg-white dark:bg-slate-900' :
+                                        'bg-slate-50 dark:bg-slate-800/50'}
                                 >
                                     <td className={isLastRow ? TABLE_STYLES.featureCellLast : TABLE_STYLES.featureCell}>
                                         {t(`guide.comparison.${row.featureKey}`)}
@@ -116,8 +117,10 @@ export const ComparisonTable = memo(() => {
 
             <div className="md:hidden space-y-4">
                 {taxForms.map((form) => (
-                    <div key={form.nameKey} className="rounded-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
-                        <div className="bg-slate-100 dark:bg-slate-800 px-4 py-3 border-b border-slate-200 dark:border-slate-700">
+                    <div key={form.nameKey} className="rounded-lg border border-slate-200 dark:border-slate-700
+                     overflow-hidden">
+                        <div className="bg-slate-100 dark:bg-slate-800 px-4 py-3 border-b border-slate-200
+                         dark:border-slate-700">
                             <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
                                 {t(`guide.comparison.${form.nameKey}`)}
                             </h4>
@@ -126,7 +129,8 @@ export const ComparisonTable = memo(() => {
                             {COMPARISON_DATA.map((row, index) => (
                                 <div
                                     key={row.featureKey}
-                                    className={`px-4 py-3 ${index !== COMPARISON_DATA.length - 1 ? 'border-b border-slate-200 dark:border-slate-700' : ''}`}
+                                    className={`px-4 py-3 ${index !== COMPARISON_DATA.length - 1 ?
+                                        'border-b border-slate-200 dark:border-slate-700' : ''}`}
                                 >
                                     <div className="text-xs font-medium text-slate-900 dark:text-slate-100 mb-1">
                                         {t(`guide.comparison.${row.featureKey}`)}

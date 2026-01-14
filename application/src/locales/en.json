@@ -81,7 +81,68 @@
             "pit": "PIT",
             "vat": "VAT",
             "zus": "ZUS",
-            "health": "NFZ"
+            "health": "NFZ",
+            "breakdown": {
+                "pit": {
+                    "title": "Income tax",
+                    "subtitle": "Income tax to pay",
+                    "step1": "Step 1: Calculating the tax base",
+                    "step2": "Step 2: Calculating the tax",
+                    "revenue": "Revenue",
+                    "costs": "Deductible costs",
+                    "zus": "ZUS contributions (deductible)",
+                    "health50": "50% health contribution",
+                    "taxBase": "Tax base",
+                    "taxRate": "Base × Tax rate",
+                    "freeAmount": "Tax-free amount (monthly)",
+                    "freeAmountYearly": "Annual tax-free amount",
+                    "taxToPay": "Tax to pay"
+                },
+                "vat": {
+                    "title": "VAT",
+                    "subtitle": "VAT to pay to Tax Office",
+                    "step1": "Step 1: Output VAT (from sales)",
+                    "step2": "Step 2: Input VAT (from purchases)",
+                    "step3": "Step 3: VAT to pay",
+                    "revenueGross": "Revenue gross (with VAT)",
+                    "costsGross": "Costs gross (with VAT)",
+                    "vatRate": "VAT rate",
+                    "vatDue": "Output VAT",
+                    "vatDeductible": "Input VAT (deductible)",
+                    "vatDeducted": "Input VAT (deducted)",
+                    "noCosts": "No costs with VAT to deduct",
+                    "toPay": "To pay",
+                    "total": "Total",
+                    "info": "Output VAT is tax on your sales, Input VAT is tax from purchases that you can deduct. The difference is the amount to pay to the Tax Office."
+                },
+                "zus": {
+                    "title": "ZUS",
+                    "subtitle": "ZUS contributions",
+                    "full": "Full",
+                    "small": "Small",
+                    "startup": "Startup relief",
+                    "pension": "Pension",
+                    "disability": "Disability",
+                    "sickness": "Sickness",
+                    "accident": "Accident",
+                    "labor": "Labor Fund",
+                    "startupInfo": "During the startup relief period you don't pay ZUS for the first 6 months"
+                },
+                "health": {
+                    "title": "Health contribution",
+                    "subtitle": "Health contribution (NFZ)",
+                    "calculation": "Calculation",
+                    "lumpSumInfo": "Lump sum - health contribution depends on revenue amount",
+                    "tier1": "Up to 60,000 PLN: 9% × average salary",
+                    "tier2": "60,000-300,000 PLN: 27% × average salary",
+                    "tier3": "Above 300,000 PLN: 9% × income",
+                    "yearlyRevenue": "Your annual revenue",
+                    "tier": "Tier",
+                    "flat19Info": "With flat tax you can deduct the entire health contribution from tax.",
+                    "taxScaleInfo": "With tax scale you can deduct the entire health contribution from tax.",
+                    "lumpSumDeductionInfo": "With lump sum you cannot deduct health contribution from tax."
+                }
+            }
         }
     },
     "taxForms": {

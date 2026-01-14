@@ -24,8 +24,8 @@ export const TableOfContents = memo<TableOfContentsProps>(({
                         <button
                             onClick={() => onSectionClick(id)}
                             className={`${GUIDE_STYLES.sidebarButton} ${activeSection === id
-                                    ? GUIDE_STYLES.sidebarButtonActive
-                                    : GUIDE_STYLES.sidebarButtonInactive
+                                ? GUIDE_STYLES.sidebarButtonActive
+                                : GUIDE_STYLES.sidebarButtonInactive
                                 }`}
                         >
                             {label}
