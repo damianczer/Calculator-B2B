@@ -15,7 +15,7 @@ export const useCountUp = (target: number, duration: number = 800) => {
             const now = Date.now();
             const elapsed = now - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            
+
             const easeOutQuart = 1 - Math.pow(1 - progress, 4);
             const currentValue = startValue + (endValue - startValue) * easeOutQuart;
 

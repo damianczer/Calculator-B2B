@@ -81,7 +81,68 @@
             "pit": "PIT",
             "vat": "VAT",
             "zus": "ZUS",
-            "health": "NFZ"
+            "health": "NFZ",
+            "breakdown": {
+                "pit": {
+                    "title": "Podatek dochodowy",
+                    "subtitle": "Podatek dochodowy do zapłaty",
+                    "step1": "Krok 1: Obliczenie podstawy opodatkowania",
+                    "step2": "Krok 2: Obliczenie podatku",
+                    "revenue": "Przychód",
+                    "costs": "Koszty uzyskania przychodu",
+                    "zus": "Składki ZUS (odliczalne)",
+                    "health50": "50% składki zdrowotnej",
+                    "taxBase": "Podstawa opodatkowania",
+                    "taxRate": "Podstawa × Stawka podatku",
+                    "freeAmount": "Kwota wolna od podatku (miesięcznie)",
+                    "freeAmountYearly": "Roczna kwota wolna",
+                    "taxToPay": "Podatek do zapłaty"
+                },
+                "vat": {
+                    "title": "VAT",
+                    "subtitle": "VAT do zapłaty do US",
+                    "step1": "Krok 1: VAT należny (od sprzedaży)",
+                    "step2": "Krok 2: VAT naliczony (od zakupów)",
+                    "step3": "Krok 3: VAT do zapłaty",
+                    "revenueGross": "Przychody brutto (z VAT)",
+                    "costsGross": "Koszty brutto (z VAT)",
+                    "vatRate": "Stawka VAT",
+                    "vatDue": "VAT należny",
+                    "vatDeductible": "VAT naliczony (do odliczenia)",
+                    "vatDeducted": "VAT naliczony (odliczony)",
+                    "noCosts": "Brak kosztów z VAT do odliczenia",
+                    "toPay": "Do zapłaty",
+                    "total": "Razem",
+                    "info": "VAT należny to podatek od Twoich przychodów, VAT naliczony to podatek z zakupów, który możesz odliczyć. Różnica to kwota do zapłaty do Urzędu Skarbowego."
+                },
+                "zus": {
+                    "title": "ZUS",
+                    "subtitle": "Składki ZUS",
+                    "full": "Pełny",
+                    "small": "Mały",
+                    "startup": "Ulga startowa",
+                    "pension": "Emerytalna",
+                    "disability": "Rentowa",
+                    "sickness": "Chorobowa",
+                    "accident": "Wypadkowa",
+                    "labor": "Fundusz Pracy",
+                    "startupInfo": "W okresie ulgi startowej nie płacisz ZUS przez pierwsze 6 miesięcy"
+                },
+                "health": {
+                    "title": "Składka zdrowotna",
+                    "subtitle": "Składka zdrowotna (NFZ)",
+                    "calculation": "Kalkulacja",
+                    "lumpSumInfo": "Ryczałt - składka zdrowotna zależy od wysokości przychodów",
+                    "tier1": "Do 60 000 PLN: 9% × przeciętne wynagrodzenie",
+                    "tier2": "60 000-300 000 PLN: 27% × przeciętne wynagrodzenie",
+                    "tier3": "Powyżej 300 000 PLN: 9% × dochód",
+                    "yearlyRevenue": "Twoje przychody roczne",
+                    "tier": "Przedział",
+                    "flat19Info": "Przy liniówce możesz odliczyć całą składkę zdrowotną od podatku.",
+                    "taxScaleInfo": "Przy skali podatkowej możesz odliczyć całą składkę zdrowotną od podatku.",
+                    "lumpSumDeductionInfo": "Przy ryczałcie nie możesz odliczyć składki zdrowotnej od podatku."
+                }
+            }
         }
     },
     "taxForms": {

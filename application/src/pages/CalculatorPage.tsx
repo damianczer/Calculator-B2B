@@ -19,12 +19,14 @@ const CalculatorPage = memo(() => {
     return (
         <div className="h-full flex flex-col bg-slate-50 dark:bg-slate-950">
             <div className="max-w-[1600px] mx-auto w-full flex flex-col h-full">
-                <div className="min-h-full flex flex-col border-x border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-y-auto">
+                <div className="min-h-full flex flex-col border-x border-slate-200 dark:border-slate-800 bg-white
+                 dark:bg-slate-900 overflow-y-auto">
                     <div className="w-full">
                         <ResultsCard
                             netIncome={calculations.netIncome}
                             breakdown={calculations.breakdown}
                             invoiceTotal={calculations.invoiceTotal}
+                            detailedBreakdown={calculations.detailedBreakdown}
                         />
                     </div>
                     <div className="px-4 lg:px-8 py-8">

@@ -5,6 +5,43 @@ export interface TaxBreakdown {
     health: number;
 }
 
+export interface DetailedBreakdown {
+    pit: {
+        pit: number;
+        revenue: number;
+        costs: number;
+        zus: number;
+        healthDeduction: number;
+        taxBase: number;
+        taxRate: number;
+        taxForm: string;
+        freeAmount?: number;
+    };
+    vat: {
+        vat: number;
+        vatFromRevenue: number;
+        vatFromCosts: number;
+    };
+    zus: {
+        total: number;
+        pension: number;
+        disability: number;
+        sickness: number;
+        accident: number;
+        labor: number;
+        base: number;
+        zusType: string;
+    };
+    health: {
+        health: number;
+        healthBase: number;
+        healthRate: number;
+        taxForm: string;
+        yearlyRevenue?: number;
+        tier?: string;
+    };
+}
+
 export interface CalculatorSettings {
     taxForm: string;
     zusType: string;
@@ -35,4 +72,5 @@ export interface ResultsCardProps {
     netIncome?: number;
     breakdown?: TaxBreakdown;
     invoiceTotal?: number;
+    detailedBreakdown?: DetailedBreakdown;
 }

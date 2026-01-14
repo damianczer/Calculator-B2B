@@ -1,18 +1,30 @@
 import { NBPClient } from './clients/nbp.client';
 import { CoinGeckoClient } from './clients/coingecko.client';
 import type { ExchangeRate } from '../../types/currency';
+import { retryWithBackoff, logError } from '../../utils/errorHandling';
 
 class CurrencyService {
     private readonly nbpClient = new NBPClient();
     private readonly coinGeckoClient = new CoinGeckoClient();
 
     async fetchExchangeRate(currencyCode: string): Promise<ExchangeRate> {
-        return this.nbpClient.fetchExchangeRate(currencyCode);
+        return retryWithBackoff(
+            () => this.nbpClient.fetchExchangeRate(currencyCode),
+            3,
+            1000
+        ).catch(error => {
+            logError('CurrencyService.fetchExchangeRate', error);
+            throw error;
+        });
     }
 
     async fetchMultipleRates(currencyCodes: string[]): Promise<ExchangeRate[]> {
         const results = await Promise.allSettled(
-            currencyCodes.map(code => this.nbpClient.fetchExchangeRate(code))
+            currencyCodes.map(code => retryWithBackoff(
+                () => this.nbpClient.fetchExchangeRate(code),
+                2,
+                1000
+            ))
         );
 
         return results.map((result, index) => {
@@ -21,6 +33,8 @@ class CurrencyService {
             }
 
             const code = currencyCodes[index];
+            logError(`CurrencyService.fetchMultipleRates[${code}]`, result.reason);
+
             return {
                 code,
                 currency: code,
@@ -34,11 +48,25 @@ class CurrencyService {
     }
 
     async fetchCryptoRates(): Promise<ExchangeRate[]> {
-        return this.coinGeckoClient.fetchCryptoRates();
+        return retryWithBackoff(
+            () => this.coinGeckoClient.fetchCryptoRates(),
+            3,
+            2000
+        ).catch(error => {
+            logError('CurrencyService.fetchCryptoRates', error);
+            throw error;
+        });
     }
 
     async fetchGoldPrice(): Promise<ExchangeRate> {
-        return this.nbpClient.fetchGoldPrice();
+        return retryWithBackoff(
+            () => this.nbpClient.fetchGoldPrice(),
+            3,
+            1000
+        ).catch(error => {
+            logError('CurrencyService.fetchGoldPrice', error);
+            throw error;
+        });
     }
 
     async fetchAllRates(currencyCodes: string[]): Promise<{

@@ -5,9 +5,18 @@ import CardHeader from '../common/CardHeader';
 import EmptyState from '../common/EmptyState';
 import Button from '../common/Button';
 import { CustomDropdown } from '../common/CustomDropdown';
+import InputWithUnit from '../common/InputWithUnit';
 import { DocumentIcon, TrashIcon, ReceiptIcon } from '../common/icons';
 import type { CostItem } from '../../hooks/useB2BCalculator';
 import { formatNumber } from '../../utils/format';
+import {
+    INPUT_CLASSES,
+    BG_SECONDARY,
+    BORDER_CARD,
+    HOVER_BG_RED,
+    TRANSITION_COLORS,
+    ROUNDED_LG
+} from '../../constants/inputStyles';
 
 interface CostsCardProps {
     costs: CostItem[];
@@ -34,7 +43,7 @@ const CostsCard: FC<CostsCardProps> = ({ costs, setCosts }) => {
         setCosts(costs.filter(c => c.id !== id));
     };
 
-    const updateCost = (id: number, field: keyof CostItem, value: unknown) => {
+    const updateCost = <K extends keyof CostItem>(id: number, field: K, value: CostItem[K]) => {
         setCosts(costs.map(c => c.id === id ? { ...c, [field]: value } : c));
     };
 
@@ -45,9 +54,10 @@ const CostsCard: FC<CostsCardProps> = ({ costs, setCosts }) => {
 
     return (
         <Card>
-            <CardHeader 
-                title={t('calculator.costs.title')} 
-                subtitle={costs.length > 0 ? `${t('common.total')}: ${formatNumber(totalMonthlyCosts)} ${t('common.perMonth')}` : t('calculator.costs.subtitle')}
+            <CardHeader
+                title={t('calculator.costs.title')}
+                subtitle={costs.length > 0 ? `${t('common.total')}: ${formatNumber(totalMonthlyCosts)} 
+                ${t('common.perMonth')}` : t('calculator.costs.subtitle')}
                 icon={<ReceiptIcon />}
             />
             <div className="p-4 space-y-3 flex-1 flex flex-col">
@@ -59,9 +69,9 @@ const CostsCard: FC<CostsCardProps> = ({ costs, setCosts }) => {
                 ) : (
                     <div className="space-y-3 flex-1">
                         {costs.map((cost) => (
-                            <div 
-                                key={cost.id} 
-                                className="p-3 bg-gray-50 dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700"
+                            <div
+                                key={cost.id}
+                                className={`p-3 ${BG_SECONDARY} ${ROUNDED_LG} ${BORDER_CARD}`}
                             >
                                 <div className="flex items-start gap-2 mb-2">
                                     <input
@@ -69,40 +79,44 @@ const CostsCard: FC<CostsCardProps> = ({ costs, setCosts }) => {
                                         value={cost.name}
                                         onChange={(e) => updateCost(cost.id, 'name', e.target.value)}
                                         placeholder={t('calculator.costs.costName')}
-                                        className="flex-1 px-3 py-1.5 text-sm border border-slate-300 dark:border-slate-600 rounded focus:border-slate-600 dark:focus:border-slate-400 focus:ring-1 focus:ring-slate-600 dark:focus:ring-slate-400 outline-none transition-all bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
+                                        className={INPUT_CLASSES}
                                     />
                                     <button
                                         onClick={() => deleteCost(cost.id)}
-                                        className="p-1.5 hover:bg-red-100 dark:hover:bg-red-900/30 rounded transition-colors"
+                                        className={`p-1.5 ${HOVER_BG_RED} ${ROUNDED_LG} ${TRANSITION_COLORS}`}
                                         title="Usuń koszt"
                                     >
                                         <TrashIcon className="w-4 h-4 text-gray-600 dark:text-slate-400" />
                                     </button>
                                 </div>
-                                
+
                                 <div className="flex gap-2">
-                                    <input
-                                        type="number"
+                                    <InputWithUnit
                                         value={cost.amount}
                                         onChange={(e) => updateCost(cost.id, 'amount', e.target.value)}
                                         placeholder="0"
-                                        className="flex-1 px-3 py-1.5 text-sm border border-slate-300 dark:border-slate-600 rounded focus:border-slate-600 dark:focus:border-slate-400 focus:ring-1 focus:ring-slate-600 dark:focus:ring-slate-400 outline-none transition-all bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 dark:[color-scheme:dark]"
+                                        unit="PLN"
+                                        label={t('calculator.costs.amount')}
                                     />
                                     <CustomDropdown
                                         value={cost.isMonthly ? t('calculator.costs.monthly') : t('calculator.costs.yearly')}
-                                        onChange={(value) => updateCost(cost.id, 'isMonthly', value === t('calculator.costs.monthly'))}
+                                        onChange={(value) => updateCost(cost.id, 'isMonthly',
+                                            value === t('calculator.costs.monthly'))}
                                         options={[
                                             { code: t('calculator.costs.monthly') },
                                             { code: t('calculator.costs.yearly') }
                                         ]}
-                                        className="w-32 pl-3 pr-8 py-1.5 text-sm border border-slate-300 dark:border-slate-600 rounded focus:border-slate-600 dark:focus:border-slate-400 focus:ring-1 focus:ring-slate-600 dark:focus:ring-slate-400 outline-none transition-all bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
+                                        className="w-32 pl-3 pr-8 py-1.5 text-sm border border-slate-300
+                                        dark:border-slate-600 rounded focus:border-slate-600 dark:focus:border-slate-400
+                                        focus:ring-1 focus:ring-slate-600 dark:focus:ring-slate-400 outline-none
+                                        transition-all bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
                                     />
                                 </div>
                             </div>
                         ))}
                     </div>
                 )}
-                
+
                 <Button fullWidth onClick={addCost}>
                     <span className="text-lg">+</span>
                     <span>{t('calculator.costs.addCost')}</span>

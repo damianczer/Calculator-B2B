@@ -41,7 +41,6 @@ export const CURRENCY_CARD_ERROR_TEXT_CLASSES = 'text-xs text-red-600 dark:text-
 export const CURRENCY_CARD_DIVIDER_CLASSES = 'pt-4 border-t border-slate-200 dark:border-slate-700';
 export const CURRENCY_CARD_INFO_CLASSES = 'flex justify-between items-center text-xs text-slate-500 dark:text-slate-500';
 export const CURRENCY_CARD_INFO_VALUE_CLASSES = 'font-medium';
-
 export const HEADER_CLASSES = 'sticky top-0 z-50 w-full bg-gradient-to-r from-blue-400 to-blue-500 dark:from-blue-700 dark:to-blue-800 backdrop-blur transition-colors shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.3)]';
 export const HEADER_BUTTON_BASE = 'rounded-lg bg-white/20 dark:bg-white/10 text-white hover:bg-white/30 dark:hover:bg-white/20 transition-all';
 

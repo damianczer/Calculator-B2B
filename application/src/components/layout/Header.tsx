@@ -52,7 +52,8 @@ const Header = memo<HeaderProps>(() => {
                                         >
                                             {t(link.labelKey)}
                                         </Link>
-                                        {index < NAVIGATION_LINKS.length - 1 && !NAVIGATION_LINKS.some(l => l.path === location.pathname)
+                                        {index < NAVIGATION_LINKS.length - 1 &&
+                                            !NAVIGATION_LINKS.some(l => l.path === location.pathname)
                                             && (
                                                 <div className="w-px h-6 bg-white/20 self-center" />
                                             )}
@@ -63,7 +64,8 @@ const Header = memo<HeaderProps>(() => {
 
                         <button
                             onClick={toggleLanguage}
-                            className="h-10 w-10 flex items-center justify-center font-medium text-sm rounded-lg bg-white/10 text-blue-50 hover:text-white hover:bg-white/20 transition-all"
+                            className="h-10 w-10 flex items-center justify-center font-medium text-sm rounded-lg
+                             bg-white/10 text-blue-50 hover:text-white hover:bg-white/20 transition-all"
                             aria-label="Toggle language"
                         >
                             {language === 'pl' ? 'EN' : 'PL'}
@@ -71,7 +73,8 @@ const Header = memo<HeaderProps>(() => {
 
                         <button
                             onClick={toggleTheme}
-                            className="h-10 w-10 flex items-center justify-center rounded-lg bg-white/10 text-blue-50 hover:text-white hover:bg-white/20 transition-all"
+                            className="h-10 w-10 flex items-center justify-center rounded-lg bg-white/10
+                             text-blue-50 hover:text-white hover:bg-white/20 transition-all"
                             aria-label="Toggle theme"
                         >
                             {theme === 'light' ? (
@@ -86,7 +89,8 @@ const Header = memo<HeaderProps>(() => {
                 <div className="md:hidden py-3 space-y-3">
                     <div className="flex items-center justify-between pl-2">
                         <div className="flex items-center gap-2">
-                            <h1 className="text-lg font-bold tracking-tight font-sans whitespace-nowrap flex items-center gap-1.5">
+                            <h1 className="text-lg font-bold tracking-tight font-sans whitespace-nowrap flex
+                             items-center gap-1.5">
                                 <CalculatorIcon className="w-5 h-5 text-white" />
                                 <span className="text-white">Calculator</span>
                                 {' '}
@@ -104,7 +108,8 @@ const Header = memo<HeaderProps>(() => {
                         <div className="flex items-center gap-2">
                             <button
                                 onClick={toggleLanguage}
-                                className="h-9 w-9 flex items-center justify-center font-medium text-xs rounded-lg bg-white/10 text-blue-50 hover:text-white hover:bg-white/20 transition-all"
+                                className="h-9 w-9 flex items-center justify-center font-medium text-xs rounded-lg
+                                 bg-white/10 text-blue-50 hover:text-white hover:bg-white/20 transition-all"
                                 aria-label="Toggle language"
                             >
                                 {language === 'pl' ? 'EN' : 'PL'}
@@ -112,7 +117,8 @@ const Header = memo<HeaderProps>(() => {
 
                             <button
                                 onClick={toggleTheme}
-                                className="h-9 w-9 flex items-center justify-center rounded-lg bg-white/10 text-blue-50 hover:text-white hover:bg-white/20 transition-all"
+                                className="h-9 w-9 flex items-center justify-center rounded-lg bg-white/10
+                                 text-blue-50 hover:text-white hover:bg-white/20 transition-all"
                                 aria-label="Toggle theme"
                             >
                                 {theme === 'light' ? (
@@ -130,7 +136,8 @@ const Header = memo<HeaderProps>(() => {
                                 <React.Fragment key={link.path}>
                                     <Link
                                         to={link.path}
-                                        className={`flex-1 px-2 py-1.5 text-xs font-medium rounded-md transition-all duration-200 text-center
+                                        className={`flex-1 px-2 py-1.5 text-xs font-medium rounded-md transition-all
+                                             duration-200 text-center
                                             ${location.pathname === link.path
                                                 ? 'bg-white/70 text-blue-700 shadow-sm'
                                                 : 'text-blue-50 hover:text-white hover:bg-white/20'
@@ -138,9 +145,10 @@ const Header = memo<HeaderProps>(() => {
                                     >
                                         {t(link.labelKey)}
                                     </Link>
-                                    {index < NAVIGATION_LINKS.length - 1 && !NAVIGATION_LINKS.some(l => l.path === location.pathname) && (
-                                        <div className="w-px h-6 bg-white/20" />
-                                    )}
+                                    {index < NAVIGATION_LINKS.length - 1 &&
+                                        !NAVIGATION_LINKS.some(l => l.path === location.pathname) && (
+                                            <div className="w-px h-6 bg-white/20" />
+                                        )}
                                 </React.Fragment>
                             ))}
                         </div>

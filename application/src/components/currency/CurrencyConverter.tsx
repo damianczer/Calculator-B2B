@@ -1,10 +1,11 @@
-import { memo, useState } from 'react';
+import { memo, useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { ExchangeRate } from '../../types/currency';
 import Card from '../common/Card';
 import { CustomDropdown } from '../common/CustomDropdown';
 import { useCurrencyConverter } from '../../hooks/useCurrencyConverter';
 import { SwapIcon } from '../common/icons';
+import { sanitizeNumberInput } from '../../utils/validation';
 import {
     CURRENCY_INPUT_CLASSES,
     CURRENCY_DROPDOWN_CLASSES,
@@ -35,6 +36,17 @@ export const CurrencyConverter = memo<CurrencyConverterProps>(({ rates }) => {
         swapCurrencies,
     } = useCurrencyConverter({ rates });
 
+    const handleAmountChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+        const sanitized = sanitizeNumberInput(e.target.value);
+        setAmount(sanitized);
+    }, [setAmount]);
+
+    const handleKeyDown = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (['e', 'E', '+', '-'].includes(e.key)) {
+            e.preventDefault();
+        }
+    }, []);
+
     return (
         <Card>
             <div className={CURRENCY_CONVERTER_HEADER_CLASSES}>
@@ -48,7 +60,8 @@ export const CurrencyConverter = memo<CurrencyConverterProps>(({ rates }) => {
                         <input
                             type="number"
                             value={amount}
-                            onChange={(e) => setAmount(e.target.value)}
+                            onChange={handleAmountChange}
+                            onKeyDown={handleKeyDown}
                             onFocus={() => setIsFocused(true)}
                             onBlur={() => setIsFocused(false)}
                             className={CURRENCY_INPUT_CLASSES}

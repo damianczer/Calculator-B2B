@@ -62,7 +62,10 @@ const SettingsCard: FC<SettingsCardProps> = memo(({ settings, setSettings }) => 
                             if (selected) updateSetting('taxForm', selected.value);
                         }}
                         options={taxForms.map(opt => ({ code: opt.label }))}
-                        className="w-full px-3 py-1.5 text-sm border border-slate-300 dark:border-slate-600 rounded focus:border-slate-600 dark:focus:border-slate-400 focus:ring-1 focus:ring-slate-600 dark:focus:ring-slate-400 outline-none transition-all bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
+                        className="w-full px-3 py-1.5 text-sm border border-slate-300 dark:border-slate-600
+                         rounded focus:border-slate-600 dark:focus:border-slate-400 focus:ring-1 focus:ring-slate-600
+                         dark:focus:ring-slate-400 outline-none transition-all bg-white dark:bg-slate-900
+                         text-slate-900 dark:text-slate-100"
                     />
                 </div>
 
@@ -83,7 +86,10 @@ const SettingsCard: FC<SettingsCardProps> = memo(({ settings, setSettings }) => 
                                 { code: '15', name: t('calculator.settings.lumpSumRates.15') },
                                 { code: '17', name: t('calculator.settings.lumpSumRates.17') }
                             ]}
-                            className="w-full px-3 py-1.5 text-sm border border-slate-300 dark:border-slate-600 rounded focus:border-slate-600 dark:focus:border-slate-400 focus:ring-1 focus:ring-slate-600 dark:focus:ring-slate-400 outline-none transition-all bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
+                            className="w-full px-3 py-1.5 text-sm border border-slate-300 dark:border-slate-600
+                            rounded focus:border-slate-600 dark:focus:border-slate-400 focus:ring-1
+                            focus:ring-slate-600 dark:focus:ring-slate-400 outline-none transition-all bg-white
+                            dark:bg-slate-900 text-slate-900 dark:text-slate-100"
                             label={t('calculator.settings.lumpSumRate')}
                         />
                     </div>
@@ -100,7 +106,10 @@ const SettingsCard: FC<SettingsCardProps> = memo(({ settings, setSettings }) => 
                             if (selected) updateSetting('zusType', selected.value);
                         }}
                         options={zusTypes.map(opt => ({ code: opt.label }))}
-                        className="w-full px-3 py-1.5 text-sm border border-slate-300 dark:border-slate-600 rounded focus:border-slate-600 dark:focus:border-slate-400 focus:ring-1 focus:ring-slate-600 dark:focus:ring-slate-400 outline-none transition-all bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
+                        className="w-full px-3 py-1.5 text-sm border border-slate-300 dark:border-slate-600
+                         rounded focus:border-slate-600 dark:focus:border-slate-400 focus:ring-1 focus:ring-slate-600
+                          dark:focus:ring-slate-400 outline-none transition-all bg-white dark:bg-slate-900
+                           text-slate-900 dark:text-slate-100"
                     />
                 </div>
 
@@ -129,7 +138,8 @@ const SettingsCard: FC<SettingsCardProps> = memo(({ settings, setSettings }) => 
                 </div>
 
                 <div className="pt-3 border-t border-gray-200 dark:border-slate-700 space-y-2">
-                    <div className="p-3 bg-gray-50 dark:bg-slate-900 rounded border border-gray-300 dark:border-slate-700">
+                    <div className="p-3 bg-gray-50 dark:bg-slate-900 rounded border border-gray-300
+                     dark:border-slate-700">
                         <CheckboxField
                             label={`${t('calculator.settings.pit0')} (${t('calculator.settings.pit0Limit')})`}
                             checked={settings.pit0}

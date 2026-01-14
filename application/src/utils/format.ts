@@ -37,3 +37,37 @@ export const formatDate = (dateString: string, locale: string): string => {
 export const formatTime = (date: Date, locale: string): string => {
     return date.toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' });
 };
+
+export const getResponsiveNumberClasses = (formattedValue: string) => {
+    const length = formattedValue.replace(/\s/g, '').length;
+
+    if (length > 12) {
+        return {
+            fontSize: 'text-xl',
+            padding: 'px-3 py-2',
+            unitSize: 'text-sm'
+        };
+    }
+
+    if (length > 9) {
+        return {
+            fontSize: 'text-2xl',
+            padding: 'px-4 py-2.5',
+            unitSize: 'text-base'
+        };
+    }
+
+    if (length > 7) {
+        return {
+            fontSize: 'text-2xl',
+            padding: 'px-5 py-3',
+            unitSize: 'text-base'
+        };
+    }
+
+    return {
+        fontSize: 'text-3xl',
+        padding: 'px-6 py-3',
+        unitSize: 'text-lg'
+    };
+};
